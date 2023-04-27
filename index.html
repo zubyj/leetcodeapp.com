@@ -1,12 +1,171 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Leetcode Explained</title>
-</head>
-<body>
-   <h1>Leetcode Explained</h1> 
-</body>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Leetcode Explained</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a
+              class="nav-link"
+              href="https://github.com/zubyj/leetcode-explained"
+              target="_blank"
+              rel="noopener"
+              >Github</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container-fluid py-5">
+      <div class="row">
+        <!-- Video Section -->
+        <section class="col-md-8 offset-md-2 text-center mb-5">
+          <h2 class="mb-4">Leetcode Explained Tutorial</h2>
+          <div class="embed-responsive embed-responsive-16by9">
+            <iframe
+              class="embed-responsive-item"
+              src="https://www.youtube.com/embed/E5nvCyVZxuc"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </section>
+
+        <!-- Download and Github Buttons -->
+        <section class="col-md-8 offset-md-2 text-center mb-5">
+          <a
+            href="https://chrome.google.com/webstore/detail/leetcode-explained/cofoinjfjcpgcjiinjhcpomcjoalijbe"
+            target="_blank"
+            class="btn btn-primary btn-lg mr-3"
+            ><span class="text-light"
+              >Download Extension</span
+            ></a
+          >
+          <a
+            href="https://github.com/zubyj/leetcode-explained"
+            target="_blank"
+            class="btn btn-secondary btn-lg"
+            ><span class="text-light"
+            >Visit Github</span
+          ></a
+        >
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="col-md-8 offset-md-2 mb-5">
+        <h2 class="mb-4 text-center">Frequently Asked Questions</h2>
+
+        <div id="accordion">
+          <!-- Question 1 -->
+          <div class="card mb-3">
+            <div class="card-header">
+              <h3 class="mb-0">
+                <button
+                  class="btn btn-link"
+                  data-toggle="collapse"
+                  data-target="#faq1"
+                  aria-expanded="true"
+                >
+                  What is Leetcode Explained?
+                </button>
+              </h3>
+            </div>
+            <div id="faq1" class="collapse show" data-parent="#accordion">
+              <div class="card-body">
+                Leetcode Explained is a Chrome extension that provides
+                detailed explanations of Leetcode problems and solutions to
+                help you better understand them.
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 2 -->
+          <div class="card mb-3">
+            <div class="card-header">
+              <h3 class="mb-0">
+                <button
+                  class="btn btn-link collapsed"
+                  data-toggle="collapse"
+                  data-target="#faq2"
+                  aria-expanded="false"
+                >
+                  Is Leetcode Explained free to use?
+                </button>
+              </h3>
+            </div>
+            <div id="faq2" class="collapse" data-parent="#accordion">
+              <div class="card-body">
+                Yes, Leetcode Explained is completely free to use.
+              </div>
+            </div>
+          </div>
+
+          <!-- Question 3 -->
+          <div class="card">
+            <div class="card-header">
+              <h3 class="mb-0">
+                <button
+                  class="btn btn-link collapsed"
+                  data-toggle="collapse"
+                  data-target="#faq3"
+                  aria-expanded="false"
+                >
+                  How do I install Leetcode Explained?
+                </button>
+              </h3>
+            </div>
+            <div id="faq3" class="collapse" data-parent="#accordion">
+              <div class="card-body">
+                You can install Leetcode Explained by visiting its page on the
+                Chrome Web Store and clicking the "Add to Chrome" button.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <!-- Bootstrap and MUI JavaScript -->
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
