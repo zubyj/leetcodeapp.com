@@ -20,7 +20,7 @@ a:hover {
 }
 
 .btn-primary {
-  animation: pulse 5s infinite;
+  animation: pulse 3s infinite;
 }
 
 @keyframes pulse {
@@ -37,8 +37,9 @@ a:hover {
   }
 }
 
+/* Header */
 #title {
-  font-size: 3rem;
+  font-size: 2rem;
 }
 
 /* Video */
