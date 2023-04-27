@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Leetcode Explained</title>
+  <link rel="icon" type="image/png" href="./assets/icons/icon-16.png" sizes="16x16">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
@@ -36,9 +37,9 @@
 
       <!-- Title & Description -->
       <section class="col-md-8 offset-md-2 text-center mb-5">
-        <h2 class="mb-4">Leetcode Explained</h2>
+        <h2 class="mb-4 display-1" id="title">Leetcode Explained</h2>
         <p class="mb-5 text-light">
-          Adds solution videos to Leetcode problems
+          Adds solution videos directly into Leetcode problems
         </p>
 
         <!-- Download and Github Buttons -->
@@ -64,10 +65,10 @@
 
         <div id="accordion">
           <!-- Question 1 -->
-          <div class="card mb-3">
+          <a href="#" class="card mb-3" data-toggle="collapse" data-target="#faq1" aria-expanded="true">
             <div class="card-header">
               <h3 class="mb-0">
-                <button class="btn btn-link" data-toggle="collapse" data-target="#faq1" aria-expanded="true">
+                <button class="btn btn-link">
                   What is Leetcode Explained?
                 </button>
               </h3>
@@ -79,13 +80,13 @@
                 help you better understand them.
               </div>
             </div>
-          </div>
+          </a>
 
           <!-- Question 2 -->
-          <div class="card mb-3">
+          <a href="#" class="card mb-3" data-toggle="collapse" data-target="#faq2" aria-expanded="false">
             <div class="card-header">
               <h3 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#faq2" aria-expanded="false">
+                <button class="btn btn-link">
                   Is Leetcode Explained free to use?
                 </button>
               </h3>
@@ -95,13 +96,13 @@
                 Yes, Leetcode Explained is completely free to use.
               </div>
             </div>
-          </div>
+          </a>
 
           <!-- Question 3 -->
-          <div class="card">
+          <a href="#" class="card" data-toggle="collapse" data-target="#faq3" aria-expanded="false">
             <div class="card-header">
               <h3 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#faq3" aria-expanded="false">
+                <button class="btn btn-link">
                   How do I install Leetcode Explained?
                 </button>
               </h3>
@@ -112,10 +113,9 @@
                 Chrome Web Store and clicking the "Add to Chrome" button.
               </div>
             </div>
-          </div>
+          </a>
         </div>
-      </section>
-    </div>
+
   </main>
   <!-- Bootstrap and MUI JavaScript -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
