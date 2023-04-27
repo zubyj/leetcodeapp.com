@@ -3,6 +3,9 @@ body {
   color: #ffffff;
 }
 
+.btn {
+  color: white;
+}
 
 .btn-primary {
   background-color: #007bff;

@@ -16,19 +16,16 @@
 
 <body>
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <a class="navbar-brand" href="#">Leetcode Explained</a>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/zubyj/leetcode-explained" target="_blank"
-            rel="noopener">Github</a>
-        </li>
+  <nav class="navbar navbar-expand-md navbar-dark">
+    <a class="navbar-brand mx-5" href="#">
+      <img src="./assets/icons/icon.png" alt="Leetcode Explained Icon" />
+    </a>
+    <div class="ml-auto mx-5">
+      <a href="https://github.com/zubyj/leetcode-explained" target="_blank" class="btn bg-light btn-md">
+        <span class="text-dark">
+          <img src="./assets/icons/github.svg" width="25" />
+          Github
+        </span></a>
       </ul>
     </div>
   </nav>
@@ -36,28 +33,29 @@
   <!-- Main Content -->
   <main class="container-fluid py-5">
     <div class="row">
-      <!-- Video Section -->
+
+      <!-- Title & Description -->
       <section class="col-md-8 offset-md-2 text-center mb-5">
         <h2 class="mb-4">Leetcode Explained</h2>
+        <p class="mb-5 text-light">
+          Adds solution videos to Leetcode problems
+        </p>
+
+        <!-- Download and Github Buttons -->
+        <section class="col-md-8 offset-md-2 text-center mb-5">
+          <a href="https://chrome.google.com/webstore/detail/leetcode-explained/cofoinjfjcpgcjiinjhcpomcjoalijbe"
+            target="_blank" class="btn btn-primary btn-md mr-3">
+            <span class="text-light">
+              <img src="./assets/icons/chrome.svg" width="25" />
+              Add to Chrome
+            </span></a>
+        </section>
+
+        <!-- Video Section -->
         <div class="embed-responsive embed-responsive-16by9">
           <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/E5nvCyVZxuc"
             allowfullscreen></iframe>
         </div>
-      </section>
-
-      <!-- Download and Github Buttons -->
-      <section class="col-md-8 offset-md-2 text-center mb-5">
-        <a href="https://chrome.google.com/webstore/detail/leetcode-explained/cofoinjfjcpgcjiinjhcpomcjoalijbe"
-          target="_blank" class="btn btn-primary btn-md mr-3">
-          <span class="text-light">
-            <img src="./assets/icons/chrome.svg" width="25" />
-            Add to Chrome
-          </span></a>
-        <a href="https://github.com/zubyj/leetcode-explained" target="_blank" class="btn btn-primary btn-md">
-          <span class="text-light">
-            <img src="./assets/icons/github.svg" width="25" />
-            View Code
-          </span></a>
       </section>
 
       <!-- FAQ Section -->
