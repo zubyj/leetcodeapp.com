@@ -14,6 +14,7 @@ a:hover {
   color: #ffffff;
 }
 
+/* Navbar */
 .btn-primary {
   background-color: #007bff;
   border-color: #007bff;
@@ -42,12 +43,10 @@ a:hover {
   }
 }
 
-/* Header */
+/* Main Header */
 #title {
   font-size: 2rem;
 }
-
-/* CSS */
 
 .slide-in-top {
   opacity: 0;
@@ -80,6 +79,10 @@ iframe {
 }
 
 /* FAQ */
+#faq-title {
+  font-size: 1.5rem;
+}
+
 .card {
   background-color: #212121;
   color: #ffffff;
