@@ -42,6 +42,26 @@ a:hover {
   font-size: 2rem;
 }
 
+/* CSS */
+
+.slide-in-top {
+  opacity: 0;
+  transform: translateY(-50px);
+  animation: slideInTop 1s ease forwards;
+}
+
+@keyframes slideInTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Video */
 iframe {
   opacity: 0;

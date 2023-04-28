@@ -13,6 +13,15 @@
   <!-- Font Awesome CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
     integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YS66HFH441"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-YS66HFH441');
+  </script>
 </head>
 
 <body>
@@ -37,26 +46,26 @@
 
       <!-- Title & Description -->
       <section class="col-md-8 offset-md-2 text-center mb-5">
-        <h2 class="mb-4 display-1" id="title">Leetcode Explained</h2>
-        <p class="mb-5 text-light">
+        <h2 class="mb-4 display-1 slide-in-top" id="title">Leetcode Explained</h2>
+        <p class="mb-5 text-light slide-in-top">
           Adds solution videos directly into Leetcode problems
         </p>
+      </section>
 
-        <!-- Download and Github Buttons -->
-        <section class="col-md-8 offset-md-2 text-center mb-5">
-          <a href="https://chrome.google.com/webstore/detail/leetcode-explained/cofoinjfjcpgcjiinjhcpomcjoalijbe"
-            target="_blank" class="btn btn-primary btn-md mr-3">
-            <span class="text-light">
-              <img src="./assets/icons/chrome.svg" width="25" />
-              Add to Chrome
-            </span></a>
-        </section>
+      <!-- Download and Github Buttons -->
+      <section class="col-md-8 offset-md-2 text-center mb-5">
+        <a href="https://chrome.google.com/webstore/detail/leetcode-explained/cofoinjfjcpgcjiinjhcpomcjoalijbe"
+          target="_blank" class="btn btn-primary btn-md mr-3">
+          <span class="text-light">
+            <img src="./assets/icons/chrome.svg" width="25" />
+            Add to Chrome
+          </span></a>
+      </section>
 
-        <!-- Video Section -->
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/E5nvCyVZxuc"
-            allowfullscreen></iframe>
-        </div>
+      <!-- Video Section -->
+      <div class="embed-responsive embed-responsive-16by9">
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/E5nvCyVZxuc" allowfullscreen></iframe>
+      </div>
       </section>
 
       <!-- FAQ Section -->
@@ -116,6 +125,7 @@
         </div>
 
   </main>
+  <script src="script.js"></script>
   <!-- Bootstrap and MUI JavaScript -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
