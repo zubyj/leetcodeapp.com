@@ -18,6 +18,12 @@ a:hover {
   font-size: 2rem;
 }
 
+.section-description {
+  font-size: 1.2rem;
+  font-family: 'Courier New', Courier, monospace;
+  color: lightcyan;
+}
+
 /* Navbar */
 .btn-primary {
   background-color: #007bff;
