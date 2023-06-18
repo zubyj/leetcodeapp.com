@@ -47,89 +47,137 @@
       <!-- Title & Description -->
       <section class="col-md-8 offset-md-2 text-center">
         <h2 class="mb-4 display-1 slide-in-top" id="title">Leetcode Explained</h2>
-        <p class="mb-5 text-light slide-in-top">
+        <p class="mb-8 text-light slide-in-top">
           Adds solution videos directly into Leetcode problems
         </p>
       </section>
 
       <!-- Download and Github Buttons -->
-      <section class="col-md-8 offset-md-2 text-center mb-5">
+      <section class="col-md-8 offset-md-2 text-center">
         <div>
           <img src="./assets/icons/5-stars.png" width="125" alt="5 stars">
         </div>
         <a href="https://chrome.google.com/webstore/detail/leetcode-explained/cofoinjfjcpgcjiinjhcpomcjoalijbe"
-          target="_blank" class="btn btn-primary btn-md mr-3">
+          target="_blank" class="btn btn-primary btn-md mr-3 mb-3">
           <span class="text-light">
             <img src="./assets/icons/chrome.svg" width="25" />
             Add to Chrome
-          </span></a>
+          </span>
+        </a>
       </section>
 
       <!-- Video Section -->
-      <section class="col-md-8 offset-md-2 mb-5">
+      <section class="col-md-8 offset-md-2 mb-5 mt-5">
         <div class="embed-responsive embed-responsive-16by9">
           <div class="container">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/s6yuSulRxHA"
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/-Ra1ygNkQvU"
               allowfullscreen></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- Feature Images Section -->
+      <section class="col-md-8 offset-md-2 mb-5 text-center">
+        <h2 class="mb-4 display-2 section-header">Features</h2>
+        <div class="row">
+          <div class="col-md-4 feature">
+            <img src="/assets/add-video.png" class="img-fluid rounded" alt="Add video">
+          </div>
+          <div class="col-md-4 feature">
+            <img src="/assets/code-complexity.png" class="img-fluid rounded" alt="Add video">
+          </div>
+          <div class="col-md-4 feature">
+            <img src="/assets/fix-code.png" class="img-fluid rounded" alt="Add video">
           </div>
         </div>
       </section>
 
       <!-- FAQ Section -->
       <section class="col-md-8 offset-md-2 mb-5">
-        <h2 class="mb-4 display-2 text-center" id="faq-title">Frequently Asked Questions</h2>
+        <h2 class="mb-4 display-2 text-center section-header">Frequently Asked Questions</h2>
         <div id="accordion">
+
           <!-- Question 1 -->
-          <a href="#" class="card mb-3" data-toggle="collapse" data-target="#faq1" aria-expanded="true">
-            <div class="card-header">
+          <div class="card mb-3">
+            <div class="card-header" id="headingOne">
               <h3 class="mb-0">
-                <button class="btn btn-link">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne"
+                  aria-expanded="false" aria-controls="collapseOne">
                   What is Leetcode Explained?
                 </button>
               </h3>
             </div>
-            <div id="faq1" class="collapse show" data-parent="#accordion">
+
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
               <div class="card-body">
-                Leetcode Explained is a Chrome extension that provides
-                detailed explanations of Leetcode problems and solutions to
-                help you better understand them.
+                Leetcode Explained is a Chrome extension that offers comprehensive explanations for Leetcode problems,
+                along with solutions. It enhances your problem-solving skills by providing insights into optimal
+                solutions.
               </div>
             </div>
-          </a>
+          </div>
 
           <!-- Question 2 -->
-          <a href="#" class="card mb-3" data-toggle="collapse" data-target="#faq2" aria-expanded="false">
-            <div class="card-header">
+          <div class="card mb-3">
+            <div class="card-header" id="headingTwo">
               <h3 class="mb-0">
-                <button class="btn btn-link">
-                  Is Leetcode Explained free to use?
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                  aria-expanded="false" aria-controls="collapseTwo">
+                  How can Leetcode Explained assist me?
                 </button>
               </h3>
             </div>
-            <div id="faq2" class="collapse" data-parent="#accordion">
+
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
               <div class="card-body">
-                Yes, Leetcode Explained is completely free to use.
+                With Leetcode Explained, you can access video solutions directly on Leetcode problem pages, identify
+                errors in your code, and understand the complexity of your solution. It's an efficient tool for learning
+                and improving your coding abilities.
               </div>
             </div>
-          </a>
+          </div>
 
           <!-- Question 3 -->
-          <a href="#" class="card" data-toggle="collapse" data-target="#faq3" aria-expanded="false">
-            <div class="card-header">
+          <div class="card mb-3">
+            <div class="card-header" id="headingThree">
               <h3 class="mb-0">
-                <button class="btn btn-link">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
+                  aria-expanded="false" aria-controls="collapseThree">
                   How do I install Leetcode Explained?
                 </button>
               </h3>
             </div>
-            <div id="faq3" class="collapse" data-parent="#accordion">
+
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
               <div class="card-body">
-                You can install Leetcode Explained by visiting its page on the
-                Chrome Web Store and clicking the "Add to Chrome" button.
+                You can install Leetcode Explained from the Chrome Web Store. Simply visit the extension's page and
+                click the "Add to Chrome" button to begin using it.
               </div>
             </div>
-          </a>
+          </div>
+
+          <!-- Question 4 -->
+          <div class="card mb-3">
+            <div class="card-header" id="headingFour">
+              <h3 class="mb-0">
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour"
+                  aria-expanded="false" aria-controls="collapseFour">
+                  Is Leetcode Explained free to use?
+                </button>
+              </h3>
+            </div>
+
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+              <div class="card-body">
+                Yes, Leetcode Explained is entirely free to use. We believe in providing quality resources that can aid
+                in improving coding skills, and we are delighted to offer this to our users free of charge.
+              </div>
+            </div>
+          </div>
         </div>
+      </section>
+
+
   </main>
 
   <!-- Footer -->

@@ -14,6 +14,10 @@ a:hover {
   color: #ffffff;
 }
 
+.section-header {
+  font-size: 2rem;
+}
+
 /* Navbar */
 .btn-primary {
   background-color: #007bff;
@@ -78,9 +82,19 @@ iframe {
   }
 }
 
-/* FAQ */
-#faq-title {
-  font-size: 1.5rem;
+/* Features */
+.features h3 {
+  color: #1e90ff;
+}
+
+.feature {
+  transition: all 0.3s;
+  margin-bottom: 2rem;
+}
+
+.feature:hover {
+  transform: scale(1.05);
+
 }
 
 .card {
