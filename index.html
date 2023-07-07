@@ -43,33 +43,27 @@
   <!-- Main Content -->
   <main class="container-fluid py-5">
     <div class="row">
-
       <!-- Title & Description -->
       <section class="col-md-8 offset-md-2 text-center">
         <h2 class="mb-4 display-1 slide-in-top" id="title">Leetcode Explained</h2>
         <p class="mb-8 text-light slide-in-top section-description">
-          Adds solution videos directly into Leetcode problems
+          Adds company tags, solution videos, and GPT code analysis directly into Leetcode problems
+        </p>
+        <p class="mt-3 section-description">
+          Completely Free & Open Source.
         </p>
       </section>
-
-      <!-- Download and Github Buttons -->
-      <section class="col-md-8 offset-md-2 text-center">
-        <div>
-          <img src="./assets/icons/5-stars.png" width="125" alt="5 stars">
+      <section class="col-md-8 offset-md-2 text-center" id="badges">
+        <!-- Badges -->
+        <img src="https://img.shields.io/chrome-web-store/users/cofoinjfjcpgcjiinjhcpomcjoalijbe" alt="Downloads">
+        <img src="https://img.shields.io/chrome-web-store/rating/cofoinjfjcpgcjiinjhcpomcjoalijbe" alt="Rating">
+        <div id="web-store-link">
+          <a href="https://chrome.google.com/webstore/detail/leetcode-explained/cofoinjfjcpgcjiinjhcpomcjoalijbe">
+            <img src="assets/images/badge.png" alt="Badge">
+          </a>
         </div>
 
-        <a href="https://chrome.google.com/webstore/detail/leetcode-explained/cofoinjfjcpgcjiinjhcpomcjoalijbe"
-          target="_blank" class="btn btn-primary btn-md mr-3 mb-3">
-          <span class="text-light">
-            <img src="./assets/icons/chrome.svg" width="25" />
-            Add to Chrome
-          </span>
-        </a>
-        <p class="mt-3 section-description">
-          300 Users. 5 Star Rating. Free & Open Source.
-        </p>
       </section>
-
       <!-- Video Section -->
       <section class="col-md-8 offset-md-2 mb-5 mt-5">
         <div class="embed-responsive embed-responsive-16by9">
@@ -80,21 +74,54 @@
         </div>
       </section>
 
-      <!-- Feature Images Section -->
       <section class="col-md-8 offset-md-2 mb-5 text-center">
         <h2 class="mb-4 display-2 section-header">Features</h2>
         <div class="row">
           <div class="col-md-4 feature">
-            <img src="/assets/add-video.png" class="img-fluid rounded" alt="Add video">
+            <!-- Button to Open the Modal -->
+            <img src="/assets/images/add-video.png" class="img-fluid rounded" alt="Add video" data-toggle="modal"
+              data-target="#myModal1">
           </div>
           <div class="col-md-4 feature">
-            <img src="/assets/code-complexity.png" class="img-fluid rounded" alt="Add video">
+            <img src="/assets/images/code-complexity.png" class="img-fluid rounded" alt="Add video" data-toggle="modal"
+              data-target="#myModal2">
           </div>
           <div class="col-md-4 feature">
-            <img src="/assets/fix-code.png" class="img-fluid rounded" alt="Add video">
+            <img src="/assets/images/fix-code.png" class="img-fluid rounded" alt="Add video" data-toggle="modal"
+              data-target="#myModal3">
           </div>
         </div>
       </section>
+
+      <!-- The Modals -->
+      <div class="modal fade" id="myModal1">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-body">
+              <img src="/assets/images/add-video.png" class="img-fluid rounded w-100" alt="Add video">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="myModal2">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-body">
+              <img src="/assets/images/code-complexity.png" class="img-fluid rounded w-100" alt="Add video">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal fade" id="myModal3">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-body">
+              <img src="/assets/images/fix-code.png" class="img-fluid rounded w-100" alt="Add video">
+            </div>
+          </div>
+        </div>
+      </div>
+
 
       <!-- FAQ Section -->
       <section class="col-md-8 offset-md-2 mb-5">
@@ -114,9 +141,8 @@
 
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
               <div class="card-body">
-                Leetcode Explained is a Chrome extension that offers comprehensive explanations for Leetcode problems,
-                along with solutions. It enhances your problem-solving skills by providing insights into optimal
-                solutions.
+                Leetcode Explained is a free and open source browser extension that adds company tags, solution videos,
+                and GPT code analysis into Leetcode problems.
               </div>
             </div>
           </div>
