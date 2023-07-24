@@ -30,6 +30,10 @@ a:hover {
   border-color: #007bff;
 }
 
+#video {
+  width: 300px;
+}
+
 .btn-primary:hover {
   background-color: #0069d9;
   border-co5lor: #0062cc;
@@ -63,16 +67,17 @@ a:hover {
   margin-top: 30px;
 }
 
-#badges img {
-  width: 120px;
+#live-badges img {
+  width: 100px;
 }
+
+#chrome-badge {
+  width: 200px;
+}
+
 
 #web-store-link {
   margin: 30px;
-}
-
-#web-store-link img {
-  width: 250px;
 }
 
 .slide-in-top {

@@ -55,19 +55,24 @@
       </section>
       <section class="col-md-8 offset-md-2 text-center" id="badges">
         <!-- Badges -->
-        <img src="https://img.shields.io/chrome-web-store/users/cofoinjfjcpgcjiinjhcpomcjoalijbe" alt="Downloads">
-        <img src="https://img.shields.io/chrome-web-store/rating/cofoinjfjcpgcjiinjhcpomcjoalijbe" alt="Rating">
+        <div id="live-badges">
+          <img src="https://img.shields.io/chrome-web-store/users/cofoinjfjcpgcjiinjhcpomcjoalijbe" alt="Downloads">
+          <img src="https://img.shields.io/chrome-web-store/rating/cofoinjfjcpgcjiinjhcpomcjoalijbe" alt="Rating">
+        </div>
         <div id="web-store-link">
-          <a href="https://chrome.google.com/webstore/detail/leetcode-explained/cofoinjfjcpgcjiinjhcpomcjoalijbe">
-            <img src="assets/images/badge.png" alt="Badge">
+          <a href="https://chrome.google.com/webstore/detail/leetcode-explained/cofoinjfjcpgcjiinjhcpomcjoalijbe"
+            id="chrome-badge">
+            <img src="assets/images/badge.png" id="chrome-badge" alt="Download for Chrome">
+          </a>
+          <a href="https://addons.mozilla.org/en-US/firefox/addon/leetcode-explained/">
+            <img src="assets/images/firefox-badge.png" alt="Download for Firefox">
           </a>
         </div>
-
       </section>
       <!-- Video Section -->
       <section class="col-md-8 offset-md-2 mb-5 mt-5">
         <div class="embed-responsive embed-responsive-16by9">
-          <div class="container">
+          <div class="container" id="video">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/-Ra1ygNkQvU"
               allowfullscreen></iframe>
           </div>
