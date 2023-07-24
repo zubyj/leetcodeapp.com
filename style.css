@@ -66,7 +66,7 @@ a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 20px !important;
 }
 
 #web-store-links img {
@@ -85,16 +85,15 @@ a:hover {
 }
 
 .card button {
-  color: lightcyan;
+  color: lightcyan !important;
 }
 
 .card:hover {
-  cursor: pointer;
   background-color: #2d2d2d;
 }
 
 .card.clickable {
-  cursor: pointer;
+  cursor: pointer !important;
 }
 
 /* Media Queries for Larger Screens */
