@@ -22,6 +22,7 @@ a:hover {
 
 .section-header {
   font-size: 2rem;
+  text-transform: uppercase;
 }
 
 .section-description {
@@ -66,7 +67,7 @@ a:hover {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top: 20px !important;
+  margin-top: 20px;
 }
 
 #web-store-links img {
@@ -74,6 +75,21 @@ a:hover {
   height: 100%;
   padding-top: 20px;
 }
+
+/* Features Section */
+#features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.feature:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+
 
 /* FAQ Section */
 .card {
@@ -85,7 +101,7 @@ a:hover {
 }
 
 .card button {
-  color: lightcyan !important;
+  color: lightcyan;
 }
 
 .card:hover {
@@ -93,7 +109,7 @@ a:hover {
 }
 
 .card.clickable {
-  cursor: pointer !important;
+  cursor: pointer;
 }
 
 /* Media Queries for Larger Screens */
@@ -107,12 +123,18 @@ a:hover {
   }
 
   #web-store-links img {
-    height: 80px;
+    height: auto;
   }
 }
 
 @media (min-width: 1200px) {
   section {
     padding: 70px 0;
+  }
+
+  .modal-dialog {
+    width: 50%;
+    height: 50%;
+    max-width: 100%;
   }
 }
