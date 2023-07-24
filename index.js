@@ -1,6 +1,3 @@
-const titleEl = document.getElementById('title');
-titleEl.classList.add('animate');
-
 window.onload = function () {
     let cards = document.getElementsByClassName("card");
 

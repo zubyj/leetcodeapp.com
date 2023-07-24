@@ -36,11 +36,6 @@ a:hover {
   border-color: #007bff;
 }
 
-#video {
-  width: 100%;
-  margin: auto;
-}
-
 .btn-primary:hover {
   background-color: #0069d9;
   border-color: #0062cc;
@@ -48,20 +43,6 @@ a:hover {
 
 .btn-primary {
   animation: pulse 3s infinite;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-
-  50% {
-    transform: scale(1.05);
-  }
-
-  100% {
-    transform: scale(1);
-  }
 }
 
 /* Main Header */
@@ -103,13 +84,20 @@ a:hover {
   margin-bottom: 30px;
 }
 
+.card button {
+  color: lightcyan;
+}
+
+.card:hover {
+  cursor: pointer;
+  background-color: #2d2d2d;
+}
+
 .card.clickable {
   cursor: pointer;
 }
 
-
 /* Media Queries for Larger Screens */
-
 @media (min-width: 600px) {
   #web-store-links {
     flex-direction: row;
@@ -122,15 +110,10 @@ a:hover {
   #web-store-links img {
     height: 80px;
   }
-
-  #video {
-    width: 600px;
-  }
 }
 
-/* Larger devices  like computers */
-@media (min-width: 992px) {
-  #video {
-    width: 800px;
+@media (min-width: 1200px) {
+  section {
+    padding: 70px 0;
   }
 }
