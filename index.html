@@ -43,7 +43,7 @@
   <!-- Main Content -->
   <main class="container-fluid py-5">
     <div class="row">
-      <!-- Title & Description -->
+      <!-- Title & Download Links -->
       <section class="col-md-8 offset-md-2 text-center">
         <h2 class="mb-4 display-1 slide-in-top" id="title">Leetcode Explained</h2>
         <p class="mb-8 text-light slide-in-top section-description">
@@ -52,25 +52,28 @@
         <p class="mt-3 section-description">
           Completely Free & Open Source.
         </p>
-      </section>
-      <section class="col-md-8 offset-md-2 text-center" id="badges">
-        <!-- Badges -->
-        <div id="live-badges">
-          <img src="https://img.shields.io/chrome-web-store/users/cofoinjfjcpgcjiinjhcpomcjoalijbe" alt="Downloads">
-          <img src="https://img.shields.io/chrome-web-store/rating/cofoinjfjcpgcjiinjhcpomcjoalijbe" alt="Rating">
-        </div>
-        <div id="web-store-link">
-          <a href="https://chrome.google.com/webstore/detail/leetcode-explained/cofoinjfjcpgcjiinjhcpomcjoalijbe"
-            id="chrome-badge">
-            <img src="assets/images/badge.png" id="chrome-badge" alt="Download for Chrome">
-          </a>
-          <a href="https://addons.mozilla.org/en-US/firefox/addon/leetcode-explained/">
-            <img src="assets/images/firefox-badge.png" alt="Download for Firefox">
-          </a>
-        </div>
+        <div class="col-md-8 offset-md-2 text-center" id="badges">
+          <!-- Badges -->
+          <div id="live-badges">
+            <img src="https://img.shields.io/chrome-web-store/users/cofoinjfjcpgcjiinjhcpomcjoalijbe" alt="Downloads">
+            <img src="https://img.shields.io/chrome-web-store/rating/cofoinjfjcpgcjiinjhcpomcjoalijbe" alt="Rating">
+          </div>
+          <div id="web-store-links">
+            <a href="https://chrome.google.com/webstore/detail/leetcode-explained/cofoinjfjcpgcjiinjhcpomcjoalijbe"
+              id="chrome-badge">
+              <img src="assets/images/badge.png" alt="Download for Chrome">
+            </a>
+            <a href="https://addons.mozilla.org/en-US/firefox/addon/leetcode-explained/">
+              <img src="assets/images/firefox-badge.png" alt="Download for Firefox">
+            </a>
+            <a href="https://chrome.google.com/webstore/detail/leetcode-explained/cofoinjfjcpgcjiinjhcpomcjoalijbe">
+              <img src="assets/images/edge-badge.png" alt="Download for Edge">
+            </a>
+          </div>
       </section>
       <!-- Video Section -->
-      <section class="col-md-8 offset-md-2 mb-5 mt-5">
+      <section class="col-md-8 offset-md-2 mb-5 mt-5" id="video">
+        <h2 class="mb-4 display-2 text-center section-header">Watch the Demo</h2>
         <div class="embed-responsive embed-responsive-16by9">
           <div class="container" id="video">
             <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/-Ra1ygNkQvU"
@@ -134,7 +137,7 @@
         <div id="accordion">
 
           <!-- Question 1 -->
-          <div class="card mb-3">
+          <div class="card mb-3 clickable">
             <div class="card-header" id="headingOne">
               <h3 class="mb-0">
                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne"
@@ -223,7 +226,7 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="index.js"></script>
   <!-- Bootstrap and MUI JavaScript -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"

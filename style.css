@@ -2,11 +2,17 @@ body {
   background-color: #121212;
   color: #ffffff;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.container {
-  width: 75%;
-  margin: 0 auto;
+section {
+  padding: 50px 0;
+}
+
+a {
+  color: lightblue;
 }
 
 a:hover {
@@ -31,12 +37,13 @@ a:hover {
 }
 
 #video {
-  width: 300px;
+  width: 100%;
+  margin: auto;
 }
 
 .btn-primary:hover {
   background-color: #0069d9;
-  border-co5lor: #0062cc;
+  border-color: #0062cc;
 }
 
 .btn-primary {
@@ -59,91 +66,71 @@ a:hover {
 
 /* Main Header */
 #title {
-  font-size: 2.5rem;
+  font-size: 3rem;
+  font-weight: 400;
   color: lightcyan;
 }
 
 #badges {
   margin-top: 30px;
+  width: 100%;
 }
 
 #live-badges img {
   width: 100px;
 }
 
-#chrome-badge {
-  width: 200px;
+#web-store-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-
-#web-store-link {
-  margin: 30px;
+#web-store-links img {
+  width: 180px;
+  height: 100%;
+  padding-top: 20px;
 }
 
-.slide-in-top {
-  opacity: 0;
-  transform: translateY(-50px);
-  animation: slideInTop 1s ease forwards;
+/* FAQ Section */
+.card {
+  background-color: #1d1d1d;
+  border: none;
+  border-radius: 0;
+  color: #ffffff;
+  margin-bottom: 30px;
 }
 
-@keyframes slideInTop {
-  0% {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Video */
-iframe {
-  opacity: 0;
-  animation: fadeIn 3s forwards;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-
-/* Features */
-.img-fluid {
+.card.clickable {
   cursor: pointer;
 }
 
-.features h3 {
-  color: #1e90ff;
+
+/* Media Queries for Larger Screens */
+
+@media (min-width: 600px) {
+  #web-store-links {
+    flex-direction: row;
+  }
+
+  #web-store-links a {
+    margin: 0 50px;
+  }
+
+  #web-store-links img {
+    height: 80px;
+  }
+
+  #video {
+    width: 600px;
+  }
 }
 
-.feature {
-  transition: all 0.3s;
-  margin-bottom: 2rem;
-}
-
-.feature:hover {
-  transform: scale(1.05);
-
-}
-
-.card {
-  background-color: #212121;
-  color: #ffffff;
-  border-color: #333333;
-}
-
-.card-header {
-  background-color: #333333;
-  color: #ffffff;
-}
-
-.btn-link:hover {
-  text-decoration: none;
-}
-
-.btn {
-  color: white;
+/* Larger devices  like computers */
+@media (min-width: 992px) {
+  #video {
+    width: 800px;
+  }
 }
