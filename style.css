@@ -76,6 +76,11 @@ a:hover {
   padding-top: 20px;
 }
 
+#web-store-links img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
 /* Features Section */
 #features {
   display: flex;
