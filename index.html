@@ -13,6 +13,8 @@
   <!-- Font Awesome CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
     integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+  <!-- AOS library for animation on scroll-->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YS66HFH441"></script>
   <script>
@@ -41,16 +43,16 @@
   </nav>
 
   <!-- Main Content -->
-  <main class="container-fluid py-5">
+  <main class="container-fluid py-5" data-aos="fade-right" data-aos-duration="1000">
     <div class="row">
       <!-- Title & Download Links -->
-      <section class="col-md-8 offset-md-2 text-center">
+      <section class="col-md-8 offset-md-2 text-center" id="header">
         <h2 class="mb-4 display-1 slide-in-top" id="title">Leetcode Explained</h2>
         <p class="mb-8 text-light slide-in-top section-description">
           Adds company tags, solution videos, and GPT code analysis directly into Leetcode problems
         </p>
-        <p class="mt-3 section-description">
-          Completely Free & Open Source.
+        <p class="mt-3 section-description typewriter">
+          A free & open source browser extension.
         </p>
         <div class="col-md-8 offset-md-2 text-center" id="badges">
           <!-- Badges -->
@@ -72,26 +74,25 @@
           </div>
       </section>
       <!-- Features -->
-      <section class="col-md-8 offset-md-2 mb-5 text-center">
-        <h2 class="mb-4 display-2 section-header">Features</h2>
+      <section class="col-md-8 offset-md-2 mb-5 text-center" <h2 class="mb-4 display-2 section-header">Features</h2>
         <div class="row">
           <div class="col-md-4 feature">
             <!-- Button to Open the Modal -->
             <img src="/assets/images/add-video.png" class="img-fluid rounded" alt="Add video" data-toggle="modal"
-              data-target="#myModal1">
+              data-aos="flip-left" data-aos-duration="2000" data-target="#myModal1">
           </div>
           <div class="col-md-4 feature">
             <img src="/assets/images/code-complexity.png" class="img-fluid rounded" alt="Add video" data-toggle="modal"
-              data-target="#myModal2">
+              data-aos="flip-left" data-aos-duration="2000" data-target="#myModal2">
           </div>
           <div class="col-md-4 feature">
             <img src="/assets/images/fix-code.png" class="img-fluid rounded" alt="Add video" data-toggle="modal"
-              data-target="#myModal3">
+              data-aos="flip-left" data-aos-duration="2000" data-target="#myModal3">
           </div>
         </div>
       </section>
       <!-- Video Section -->
-      <section class="col-md-8 offset-md-2 mb-5 mt-5" id="video">
+      <section class="col-md-8 offset-md-2 mb-5 mt-5" id="video" data-aos="zoom-in-down" data-aos-duration="3000">
         <h2 class="mb-4 display-2 text-center section-header">Watch the Demo</h2>
         <div class="embed-responsive embed-responsive-16by9">
           <div class="container" id="video">
@@ -102,7 +103,7 @@
       </section>
       <!-- Features -->
       <section id="features">
-        <div class="modal fade" id="myModal1">
+        <div class="modal" id="myModal1">
           <div class="modal-dialog modal-dialog-centered modal-fullscreen">
             <div class="modal-content">
               <div class="modal-body">
@@ -111,7 +112,7 @@
             </div>
           </div>
         </div>
-        <div class="modal fade" id="myModal2">
+        <div class="modal" id="myModal2">
           <div class="modal-dialog modal-dialog-centered modal-fullscreen">
             <div class="modal-content">
               <div class="modal-body">
@@ -121,7 +122,7 @@
             </div>
           </div>
         </div>
-        <div class="modal fade" id="myModal3">
+        <div class="modal" id="myModal3">
           <div class="modal-dialog modal-dialog-centered modal-fullscreen">
             <div class="modal-content">
               <div class="modal-body">
@@ -132,7 +133,7 @@
         </div>
       </section>
       <!-- FAQ Section -->
-      <section class="col-md-8 offset-md-2 mb-5" id="faq">
+      <section class="col-md-8 offset-md-2 mb-5" id="faq" data-aos="fade-in" data-aos-duration="3000">
         <h2 class="mb-4 display-2 text-center section-header">Frequently Asked Questions</h2>
         <div id="accordion">
 
@@ -227,6 +228,11 @@
   </footer>
 
   <script src="index.js"></script>
+  <!-- AOS library for animation on scroll-->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <!-- Bootstrap and MUI JavaScript -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
