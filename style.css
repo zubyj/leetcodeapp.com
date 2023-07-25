@@ -99,6 +99,11 @@ a:hover {
   color: lightcyan;
 }
 
+.card button:hover {
+  color: lightcoral;
+  text-decoration: none;
+}
+
 .card:hover {
   background-color: #2d2d2d;
 }
