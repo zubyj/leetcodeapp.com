@@ -81,20 +81,10 @@ a:hover {
   cursor: pointer;
 }
 
-/* Features Section */
-#features {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 .feature:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
-
-
 
 /* FAQ Section */
 .card {

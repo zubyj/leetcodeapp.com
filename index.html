@@ -27,7 +27,7 @@
 </head>
 
 <body>
-  <!-- Navbar -->
+  <!-- Navigation Bar (Title & Github) -->
   <nav class="container navbar navbar-expand-md navbar-dark">
     <a class="navbar-brand mx-5" href="#">
       <img src="./assets/icons/icon.png" alt="Leetcode Explained Icon" width="40" />
@@ -37,15 +37,14 @@
         <span class="text-dark">
           <img src="./assets/icons/github.svg" width="25" />
           Github
-        </span></a>
-      </ul>
+        </span>
+      </a>
     </div>
   </nav>
 
-  <!-- Main Content -->
   <main class="container-fluid py-5" data-aos="fade-right">
     <div class="row">
-      <!-- Title & Download Links -->
+      <!-- Main Header - Title & Download Links -->
       <section class="col-md-8 offset-md-2 text-center" id="header">
         <h2 class="mb-4 display-1 slide-in-top" id="title">Leetcode Explained</h2>
         <p class="mb-8 text-light slide-in-top section-description">
@@ -55,7 +54,6 @@
           A free & open source browser extension.
         </p>
         <div class="col-md-8 offset-md-2 text-center" id="badges">
-          <!-- Badges -->
           <div id="live-badges">
             <img src="https://img.shields.io/chrome-web-store/users/cofoinjfjcpgcjiinjhcpomcjoalijbe" alt="Downloads">
             <img src="https://img.shields.io/chrome-web-store/rating/cofoinjfjcpgcjiinjhcpomcjoalijbe" alt="Rating">
@@ -72,74 +70,37 @@
               <img src="assets/images/edge-badge.svg" alt="Download for Edge">
             </a>
           </div>
+        </div>
       </section>
-      <!-- Features -->
-      <section class="col-md-8 offset-md-2 mb-5 text-center">
+      <!-- Features / Screenshots-->
+      <section class="col-md-10 offset-md-1 mb-5 text-center">
         <h2 class="mb-4 display-2 section-header">Features</h2>
         <div class="row">
-          <div class="col-md-4 feature">
-            <!-- Button to Open the Modal -->
-            <img src="/assets/images/add-video.png" class="img-fluid rounded" alt="Add video" data-toggle="modal"
-              data-aos="flip-left" data-aos-duration="2000" data-target="#myModal1">
+          <div class="col-lg-12 col-xl-4 feature">
+            <img src="/assets/images/add-video.png" class="img-fluid rounded" alt="Add video">
           </div>
-          <div class="col-md-4 feature">
-            <img src="/assets/images/code-complexity.png" class="img-fluid rounded" alt="Add video" data-toggle="modal"
-              data-aos="flip-left" data-aos-duration="2000" data-target="#myModal2">
+          <div class="col-lg-12 col-xl-4 feature">
+            <img src="/assets/images/code-complexity.png" class="img-fluid rounded" alt="Code complexity">
           </div>
-          <div class="col-md-4 feature">
-            <img src="/assets/images/fix-code.png" class="img-fluid rounded" alt="Add video" data-toggle="modal"
-              data-aos="flip-left" data-aos-duration="2000" data-target="#myModal3">
+          <div class="col-lg-12 col-xl-4 feature">
+            <img src="/assets/images/fix-code.png" class="img-fluid rounded" alt="Fix code">
+            </jdiv>
           </div>
-        </div>
       </section>
-      <!-- Features -->
-      <!-- <section id="features">
-        <div class="modal" id="myModal1">
-          <div class="modal-dialog modal-dialog-centered modal-fullscreen">
-            <div class="modal-content">
-              <div class="modal-body">
-                <img src="/assets/images/add-video.png" class="img-fluid rounded w-100 full-screen-img" alt="Add video">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="modal" id="myModal2">
-          <div class="modal-dialog modal-dialog-centered modal-fullscreen">
-            <div class="modal-content">
-              <div class="modal-body">
-                <img src="/assets/images/code-complexity.png" class="img-fluid rounded w-100 full-screen-img"
-                  alt="Add video">
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="modal" id="myModal3">
-          <div class="modal-dialog modal-dialog-centered modal-fullscreen">
-            <div class="modal-content">
-              <div class="modal-body">
-                <img src="/assets/images/fix-code.png" class="img-fluid rounded w-100 full-screen-img" alt="Add video">
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> -->
-      <!-- Video Section -->
+      <!-- Demo Video -->
       <section class="col-md-8 offset-md-2 mb-5 mt-5" id="video" data-aos="zoom-in-down" data-aos-duration="1000">
         <h2 class="mb-4 display-2 text-center section-header">Watch the Demo</h2>
         <div class="embed-responsive embed-responsive-16by9">
-          <div class="container" id="video">
-            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/xiiacdhcg6Q"
-              allowfullscreen></iframe>
-          </div>
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/xiiacdhcg6Q"
+            allowfullscreen></iframe>
         </div>
       </section>
       <!-- FAQ Section -->
       <section class="col-md-8 offset-md-2 mb-5" id="faq" data-aos="fade-in" data-aos-duration="3000">
         <h2 class="mb-4 display-2 text-center section-header">Frequently Asked Questions</h2>
         <div id="accordion">
-
           <!-- Question 1 -->
-          <div class="card mb-3 clickable">
+          <div class="card mb-3 clickable" id="question1">
             <div class="card-header" id="headingOne">
               <h3 class="mb-0">
                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne"
@@ -148,7 +109,6 @@
                 </button>
               </h3>
             </div>
-
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
               <div class="card-body">
                 Leetcode Explained is a free and open source browser extension that adds company tags, solution videos,
@@ -156,7 +116,6 @@
               </div>
             </div>
           </div>
-
           <!-- Question 2 -->
           <div class="card mb-3">
             <div class="card-header" id="headingTwo">
@@ -167,7 +126,6 @@
                 </button>
               </h3>
             </div>
-
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
               <div class="card-body">
                 With Leetcode Explained, you can access video solutions directly on Leetcode problem pages, identify
@@ -176,7 +134,6 @@
               </div>
             </div>
           </div>
-
           <!-- Question 3 -->
           <div class="card mb-3">
             <div class="card-header" id="headingThree">
@@ -195,7 +152,6 @@
               </div>
             </div>
           </div>
-
           <!-- Question 4 -->
           <div class="card mb-3">
             <div class="card-header" id="headingFour">
@@ -206,7 +162,6 @@
                 </button>
               </h3>
             </div>
-
             <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
               <div class="card-body">
                 Yes, Leetcode Explained is entirely free to use. We believe in providing quality resources that can aid
@@ -216,7 +171,6 @@
           </div>
         </div>
       </section>
-
   </main>
 
   <!-- Footer -->
@@ -235,8 +189,8 @@
     AOS.init();
   </script>
   <!-- Bootstrap and MUI JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
     integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
