@@ -81,6 +81,12 @@ a:hover {
   cursor: pointer;
 }
 
+.feature {
+  margin-bottom: 20px;
+  border-bottom: 1px solid lightcyan;
+  padding: 20px;
+}
+
 .feature:hover {
   transform: scale(1.1);
   cursor: pointer;
