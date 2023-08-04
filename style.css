@@ -118,6 +118,22 @@ a:hover {
   cursor: pointer;
 }
 
+/* Privacy Policy */
+#privacyPolicy {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+#privacyPolicy .card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px 0 hsla(0, 0%, 0%, 0.2);
+}
+
+#privacyPolicy button {
+  margin-bottom: 2rem;
+}
+
 /* Media Queries for Larger Screens */
 @media (min-width: 600px) {
   #web-store-links {
