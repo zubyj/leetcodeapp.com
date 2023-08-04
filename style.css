@@ -86,7 +86,9 @@ a:hover {
 }
 
 .feature {
-  border-bottom: 1px solid lightcyan;
+  border: 1px solid grey;
+  border-radius: 15px;
+  padding: 10px;
 }
 
 .feature:hover {
