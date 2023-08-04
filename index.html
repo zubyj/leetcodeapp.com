@@ -79,16 +79,24 @@
         <h2 class="mb-4 display-2 section-header">Features</h2>
         <div class="row">
           <div class="col-xs-12 col-lg-6 feature" data-aos="flip-left">
-            <img src="/assets/images/add-companies.png" class="img-fluid rounded" alt="Fix code">
+            <a href="#" class="img-modal-trigger" data-toggle="modal" data-target="#imageModal" data-img-index="0">
+              <img src="/assets/images/add-companies.png" class="img-fluid rounded" alt="Fix code">
+            </a>
           </div>
           <div class="col-xs-12 col-lg-6 feature" data-aos="flip-left">
-            <img src="/assets/images/add-videos.png" class="img-fluid rounded" alt="Add video">
+            <a href="#" class="img-modal-trigger" data-toggle="modal" data-target="#imageModal" data-img-index="1">
+              <img src="/assets/images/add-videos.png" class="img-fluid rounded" alt="Add video">
+            </a>
           </div>
           <div class="col-xs-12 col-lg-6 feature" data-aos="flip-left">
-            <img src="/assets/images/get-complexity.png" class="img-fluid rounded" alt="Code complexity">
+            <a href="#" class="img-modal-trigger" data-toggle="modal" data-target="#imageModal" data-img-index="2">
+              <img src="/assets/images/get-complexity.png" class="img-fluid rounded" alt="Code complexity">
+            </a>
           </div>
           <div class="col-xs-12 col-lg-6 feature" data-aos="flip-left">
-            <img src="/assets/images/get-solution.png" class="img-fluid rounded" alt="Fix code">
+            <a href="#" class="img-modal-trigger" data-toggle="modal" data-target="#imageModal" data-img-index="3">
+              <img src="/assets/images/get-solution.png" class="img-fluid rounded" alt="Fix code">
+            </a>
           </div>
 
         </div>
@@ -206,6 +214,22 @@
       </a>
     </div>
   </footer>
+
+  <!-- Image Modal -->
+  <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content bg-dark">
+        <div class="modal-body">
+          <img id="modalImage" src="" class="img-fluid rounded">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" id="prevButton">Previous</button>
+          <button type="button" class="btn btn-secondary" id="nextButton">Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <script src="index.js"></script>
   <!-- AOS library for animation on scroll-->
