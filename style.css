@@ -1,3 +1,12 @@
+/* Define CSS variables for reused values */
+:root {
+  --text-color-light: lightcyan;
+  --text-color-hover: lightcoral;
+  --bg-color: #1d1d1d;
+  --bg-color-hover: #2d2d2d;
+}
+
+/* General styles */
 body {
   background-color: #121212;
   color: #ffffff;
@@ -12,7 +21,7 @@ section {
 }
 
 a {
-  color: lightblue;
+  color: var(--text-color-light);
 }
 
 a:hover {
@@ -28,10 +37,10 @@ a:hover {
 .section-description {
   font-size: 1.2rem;
   font-family: 'Courier New', Courier, monospace;
-  color: lightcyan;
+  color: var(--text-color-light);
 }
 
-/* Navbar */
+/* Navbar styles */
 .btn-primary {
   background-color: #007bff;
   border-color: #007bff;
@@ -46,11 +55,11 @@ a:hover {
   animation: pulse 3s infinite;
 }
 
-/* Main Header */
+/* Main Header styles */
 #title {
   font-size: 3rem;
   font-weight: 400;
-  color: lightcyan;
+  color: var(--text-color-light);
 }
 
 #badges {
@@ -85,6 +94,7 @@ a:hover {
   width: 100vw;
 }
 
+/* Features section styles */
 .feature {
   border: 1px solid grey;
   border-radius: 15px;
@@ -96,9 +106,9 @@ a:hover {
   cursor: pointer;
 }
 
-/* FAQ Section */
+/* FAQ Section styles */
 .card {
-  background-color: #1d1d1d;
+  background-color: var(--bg-color);
   border: none;
   border-radius: 0;
   color: #ffffff;
@@ -106,23 +116,23 @@ a:hover {
 }
 
 .card button {
-  color: lightcyan;
+  color: var(--text-color-light);
 }
 
 .card button:hover {
-  color: lightcoral;
+  color: var(--text-color-hover);
   text-decoration: none;
 }
 
 .card:hover {
-  background-color: #2d2d2d;
+  background-color: var(--bg-color-hover);
 }
 
 .card.clickable {
   cursor: pointer;
 }
 
-/* Privacy Policy */
+/* Privacy Policy styles */
 #privacyPolicy {
   margin-top: 2rem;
   margin-bottom: 2rem;
