@@ -40,6 +40,12 @@ a:hover {
   color: var(--text-color-light);
 }
 
+.img-fluid:hover {
+  cursor: pointer;
+  scale: 1.1;
+  border: 1px solid white;
+}
+
 /* Navbar styles */
 .btn-primary {
   background-color: #007bff;
