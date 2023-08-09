@@ -74,7 +74,8 @@ a:hover {
 }
 
 #live-badges img {
-  width: 100px;
+  max-width: 2000px;
+  height: 30px;
 }
 
 #web-store-links {
