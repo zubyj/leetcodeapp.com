@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Leetcode Explained Extension</title>
+  <title>Leetcode Explained</title>
   <link rel="icon" type="image/png" href="./assets/icons/icon-16.png" sizes="16x16">
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -50,9 +50,7 @@
         Adds company tags, solution videos, and GPT code analysis directly into Leetcode problems
       </p>
       <p class="mt-3 section-description">
-        <b>
-          A free & open source browser extension.
-        </b>
+        A free & open source browser extension.
       </p>
       <div class="col-md-8 offset-md-2 text-center" id="badges">
         <div id="live-badges">
@@ -107,7 +105,7 @@
 
         <h2 class="mb-4 display-2 text-center section-header">Watch the Demo</h2>
         <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/xiiacdhcg6Q"
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/scvXKfL5q_A"
             allowfullscreen></iframe>
         </div>
       </div>
@@ -115,7 +113,6 @@
     <!-- FAQ Section -->
     <section class="col-md-8 offset-md-2 mb-5" id="faq" data-aos="fade-in" data-aos-duration="3000">
       <div class="container">
-
         <h2 class="mb-4 display-2 text-center section-header">FAQ</h2>
         <div id="accordion">
           <!-- Question 1 -->
@@ -131,8 +128,7 @@
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
               <div class="card-body">
                 Leetcode Explained is a free and open source browser extension that adds company tags, solution
-                videos,
-                and GPT code analysis into Leetcode problems.
+                videos, and GPT code analysis directly into Leetcode problems.
               </div>
             </div>
           </div>
@@ -142,16 +138,14 @@
               <h3 class="mb-0">
                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
                   aria-expanded="false" aria-controls="collapseTwo">
-                  How can Leetcode Explained assist me?
+                  When I install it, why does it ask for permission to read my browsing history?
                 </button>
               </h3>
             </div>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
               <div class="card-body">
-                With Leetcode Explained, you can access video solutions directly on Leetcode problem pages, identify
-                errors in your code, and understand the complexity of your solution. It's an efficient tool for
-                learning
-                and improving your coding abilities.
+                Leetcode Explained reads the title of the tab to determine which problem you are on. This is
+                necessary to display the correct company tags and solution videos in each problem.
               </div>
             </div>
           </div>
@@ -161,15 +155,15 @@
               <h3 class="mb-0">
                 <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
                   aria-expanded="false" aria-controls="collapseThree">
-                  How do I install Leetcode Explained?
+                  Does Leetcode Explained collect any data?
                 </button>
               </h3>
             </div>
 
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
               <div class="card-body">
-                You can install Leetcode Explained from the Chrome Web Store. Simply visit the extension's page and
-                click the "Add to Chrome" button to begin using it.
+                No data is collected by Leetcode Explained. All relevant data is stored locally in your browser.
+                If you would like to view the source code, you can find it on our Github.
               </div>
             </div>
           </div>
@@ -192,61 +186,69 @@
             </div>
           </div>
         </div>
+        <!-- Question 5 -->
+        <div class="card mb-3">
+          <div class="card-header" id="headingFive">
+            <h3 class="mb-0">
+              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive"
+                aria-expanded="false" aria-controls="collapseFive">
+                How can I contribute to Leetcode Explained?
+              </button>
+            </h3>
+          </div>
+          <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+            <div class="card-body">
+              Leetcode Explained is an open source project, and we welcome contributions from the community. If you
+              would like to contribute, please visit our <a
+                href="https://github.com/zubyj/leetcode-explained">Github</a> page.
+            </div>
     </section>
 
-  </div>
-  <!-- Link to Privacy Policy -->
-  <section class="container mt-5 text-center" id="privacyPolicy">
-    <div>
+    <!-- Footer -->
+    <footer class="container-fluid bg-dark py-3">
+      <div class="text-center flex">
+        <a class="mr-4" href="./privacy.html">
+          Privacy Policy
+        </a>
+        <!-- Email -->
+        <a href="mailto:zubydevelops@gmail.com">
+          Contact
+        </a>
+      </div>
+    </footer>
 
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="container-fluid bg-dark py-3">
-    <div class="text-center flex">
-      <a class="mr-4" href="./privacy.html">
-        Privacy Policy
-      </a>
-      <!-- Email -->
-      <a href="mailto:zubydevelops@gmail.com">
-        Contact
-      </a>
-    </div>
-  </footer>
-
-  <!-- Image Modal -->
-  <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-      <div class="modal-content bg-dark">
-        <div class="modal-body">
-          <img id="modalImage" src="" class="img-fluid rounded">
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" id="prevButton">Previous</button>
-          <button type="button" class="btn btn-secondary" id="nextButton">Next</button>
+    <!-- Image Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content bg-dark">
+          <div class="modal-body">
+            <img id="modalImage" src="" class="img-fluid rounded">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" id="prevButton">Previous</button>
+            <button type="button" class="btn btn-secondary" id="nextButton">Next</button>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <script src="index.js"></script>
-  <!-- AOS library for animation on scroll-->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-  <!-- Bootstrap and MUI JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+    <!-- AOS library for animation on scroll-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- Bootstrap and MUI JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
 </body>
 
 </html>
