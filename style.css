@@ -99,10 +99,23 @@ a:hover {
 }
 
 #features {
-  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-/* Features section styles */
+#features {
+  max-width: 800px;
+  padding-bottom: 30px;
+  margin: 0 auto;
+}
+
+.carousel-item {
+  border: 2px solid lightgray;
+  border-radius: 10px;
+}
+
 .feature {
   border: 1px solid grey;
   border-radius: 15px;
@@ -113,6 +126,7 @@ a:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
+
 
 /* FAQ Section styles */
 .card {
