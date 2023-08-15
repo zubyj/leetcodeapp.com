@@ -98,15 +98,13 @@ a:hover {
   cursor: pointer;
 }
 
-#features {
+#features,
+#faq {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-}
-
-#features {
-  max-width: 800px;
+  max-width: 900px;
   padding-bottom: 30px;
   margin: 0 auto;
 }
@@ -129,6 +127,8 @@ a:hover {
 
 
 /* FAQ Section styles */
+#faq {}
+
 .card {
   background-color: var(--bg-color);
   border: none;
