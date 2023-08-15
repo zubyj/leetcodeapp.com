@@ -31,7 +31,7 @@ a:hover {
 
 .section-header {
   font-size: 1.5rem;
-  padding-bottom: 3rem;
+  padding-bottom: 2rem;
   text-transform: uppercase;
 }
 
@@ -65,12 +65,13 @@ a:hover {
 /* Main Header styles */
 #title {
   font-size: 2.5rem;
+  padding-bottom: 2rem;
   font-weight: 400;
   color: var(--text-color-light);
 }
 
 #badges {
-  margin-top: 30px;
+  margin-top: 60px;
   width: 100%;
 }
 
@@ -105,7 +106,6 @@ a:hover {
   align-items: center;
   height: 100vh;
   max-width: 900px;
-  padding-bottom: 30px;
   margin: 0 auto;
 }
 
