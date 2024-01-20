@@ -33,6 +33,7 @@ a:hover {
   font-size: 1.5rem;
   padding-bottom: 2rem;
   text-transform: uppercase;
+  letter-spacing: 3px;
 }
 
 .section-description {
