@@ -30,3 +30,19 @@ window.onload = function () {
         modalImage.src = images[currentImageIndex];
     };
 };
+
+document.addEventListener("DOMContentLoaded", function () {
+    const text = "A free & open source browser extension";
+    const typewriterText = document.getElementById('typewriter-text');
+    let i = 0;
+
+    function typeWriter() {
+        if (i < text.length) {
+            typewriterText.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, 100);
+        }
+    }
+
+    typeWriter();
+})

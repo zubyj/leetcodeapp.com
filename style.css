@@ -41,6 +41,19 @@ a:hover {
   color: var(--text-color-light);
 }
 
+#typewriter-text:after {
+  content: '|';
+  opacity: 1;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+
 .img-fluid:hover {
   cursor: pointer;
   scale: 1.1;
