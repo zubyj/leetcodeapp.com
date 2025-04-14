@@ -98,6 +98,7 @@ body {
 .company-nav button.active {
     transform: translateY(-2px);
     background: var(--primary-color);
+    color: #f8fafc;
     border-color: var(--primary-color);
     box-shadow: var(--shadow-md);
 }

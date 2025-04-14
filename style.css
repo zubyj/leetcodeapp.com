@@ -113,9 +113,15 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Header Section */
-#header {
+#header-section {
     padding: var(--space-3xl) 0;
     text-align: center;
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 /* Badges Section */
