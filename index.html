@@ -13,10 +13,10 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
   <link rel="stylesheet" href="style.css" />
   <!-- Font Awesome CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
-    integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <!-- AOS library for animation on scroll-->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YS66HFH441"></script>
   <script>
@@ -29,20 +29,8 @@
 </head>
 
 <body>
-  <!-- Title & Github -->
-  <nav class="container navbar navbar-expand-md navbar-dark">
-    <a class="navbar-brand mx-5" href="#">
-      <img src="./assets/icons/icon.png" alt="Leetcode Explained Icon" width="40" />
-    </a>
-    <div class="ml-auto mx-5">
-      <a href="https://github.com/zubyj/leetcode-explained" target="_blank" class="btn bg-light btn-md">
-        <span class="text-dark">
-          <img src="./assets/icons/github.svg" alt="Github Icon" width="25" />
-          Github
-        </span>
-      </a>
-    </div>
-  </nav>
+  <!-- Include the shared navbar -->
+  <div id="navbar-placeholder"></div>
 
   <section class="col-md-8 offset-md-2 text-center" id="header" data-aos="fade-right">
     <h1 class="mb-4 display-1 slide-in-top" id="title">Leetcode Explained</h1>
@@ -71,12 +59,32 @@
       </div>
     </div>
   </section>
+
+  <!-- Company Problems Section -->
+  <section class="mb-5 text-center" id="company-problems" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-header">Company Problems</h2>
+      <p class="lead mb-5">
+        Practice coding problems asked by top tech companies in their interviews.
+        Get access to a curated list of problems from Google, Meta, Amazon, Microsoft, and more.
+      </p>
+      <div class="company-logos mb-4">
+        <i class="fab fa-google fa-2x mx-3"></i>
+        <i class="fab fa-facebook fa-2x mx-3"></i>
+        <i class="fab fa-amazon fa-2x mx-3"></i>
+        <i class="fab fa-microsoft fa-2x mx-3"></i>
+        <i class="fab fa-apple fa-2x mx-3"></i>
+      </div>
+      <a href="problems-by-company/company.html" class="btn btn-primary btn-lg">
+        View Company Problems
+      </a>
+    </div>
+  </section>
+
   <!-- Features / Screenshots-->
   <section class="mb-5 text-center" id="features">
     <div class="container">
-      <h2 class="mb-4 display-2 section-header">
-        Features
-      </h2>
+      <h2 class="section-header">Features</h2>
       <!-- Carousel -->
       <div id="featuresCarousel" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner">
@@ -153,7 +161,7 @@
   <!-- FAQ Section -->
   <section class="col-md-8 offset-md-2 mb-5" id="faq" data-aos="fade-in" data-aos-duration="3000">
     <div class="container">
-      <h2 class="mb-4 display-2 text-center section-header">FAQ</h2>
+      <h2 class="section-header text-center">FAQ</h2>
       <div id="accordion">
         <!-- Question 1 -->
         <div class="card mb-3 clickable" id="question1">
@@ -295,7 +303,7 @@
   <!-- Demo Video -->
   <section class="col-md-8 offset-md-2 mb-5 mt-5" id="video" data-aos="zoom-in-down" data-aos-duration="1000">
     <div class="container">
-      <h2 class="mb-4 display-2 text-center section-header">Demo</h2>
+      <h2 class="section-header text-center">Demo</h2>
       <div class="embed-responsive embed-responsive-16by9">
         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/scvXKfL5q_A" allowfullscreen></iframe>
       </div>
@@ -330,6 +338,17 @@
       </div>
     </div>
   </div>
+
+  <script>
+    // Load the shared navbar
+    fetch('/components/navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+        // Add active class to the current page's nav item
+        document.querySelector('a[href="/index.html"]').classList.add('active');
+      });
+  </script>
 
   <script src="index.js"></script>
   <!-- AOS library for animation on scroll-->
