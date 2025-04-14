@@ -34,16 +34,10 @@
 
 .nav-links a:hover {
     background: rgba(255, 255, 255, 0.1);
-    transform: translateY(-2px);
 }
 
 .nav-links a.active {
-    background: var(--primary-color);
-    color: white;
-}
-
-.nav-links a.active:hover {
-    background: var(--primary-hover);
+    color: #6495ed;
 }
 
 /* Responsive Design */

@@ -1,5 +1,6 @@
 /* Variables */
 :root {
+    /* Colors */
     --primary-color: #4f46e5;
     --primary-hover: #4338ca;
     --bg-primary: #0a0f1c;
@@ -9,102 +10,175 @@
     --easy: #22c55e;
     --medium: #eab308;
     --hard: #ef4444;
+
+    /* Spacing */
+    --space-xs: 0.25rem;
+    --space-sm: 0.5rem;
+    --space-md: 1rem;
+    --space-lg: 1.5rem;
+    --space-xl: 2rem;
+    --space-2xl: 3rem;
+    --space-3xl: 4rem;
+
+    /* Border Radius */
+    --radius-sm: 0.375rem;
+    --radius-md: 0.5rem;
+    --radius-lg: 0.75rem;
+
+    /* Transitions */
+    --transition-fast: 0.2s ease;
+    --transition-normal: 0.3s ease;
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
 }
 
-/* Global Styles */
+/* Reset & Base Styles */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
 body {
     background-color: var(--bg-primary);
     color: var(--text-color);
     font-family: 'Inter', sans-serif;
-    margin: 0;
+    line-height: 1.5;
     min-height: 100vh;
+    overflow-x: hidden;
+    margin-top: 100px;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Layout */
 .container {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 0 var(--space-lg);
 }
 
-/* Main Header */
-#header {
-    padding: 8rem 0 4rem;
-    text-align: center;
+section {
+    padding: var(--space-3xl) 0;
 }
 
-.display-1 {
-    font-size: 3.5rem;
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: var(--space-lg);
     font-weight: 700;
-    background: linear-gradient(135deg, #4f46e5, #22c55e);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.display-1{
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary-color), var(--easy));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: var(--space-xl);
+}
+
+.section-header {
+  font-weight: 800;
+  margin-bottom: var(--space-xl);
+}
+
+.display-1, .section-header {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+}
+
+.section-header {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
 }
 
 .section-description {
-    font-size: 1.2rem;
+    font-size: clamp(1rem, 2vw, 1.2rem);
     line-height: 1.6;
     color: var(--text-muted);
     max-width: 800px;
-    margin: 0 auto;
+    margin: 0 auto var(--space-2xl);
+}
+
+/* Header Section */
+#header {
+    padding: var(--space-3xl) 0;
+    text-align: center;
 }
 
 /* Badges Section */
 #badges {
-    margin: 3rem auto;
+    margin: var(--space-2xl) auto;
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
+    gap: var(--space-xl);
+}
+
+#live-badges {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #live-badges img {
     height: 24px;
-    margin: 0 0.5rem;
 }
 
 #web-store-links {
     display: flex;
-    gap: 2rem;
+    gap: var(--space-xl);
     flex-wrap: wrap;
     justify-content: center;
 }
 
 #web-store-links img {
     height: 48px;
-    transition: transform 0.2s ease;
+    transition: transform var(--transition-fast);
 }
 
 #web-store-links img:hover {
     transform: scale(1.05);
 }
 
-/* Section Headers */
-.section-header {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 2rem;
-    color: var(--text-color);
-}
-
 /* Company Problems Section */
 #company-problems {
-    padding: 6rem 0;
     background: linear-gradient(to bottom, var(--bg-primary), var(--bg-secondary));
-    margin: 4rem 0;
+    margin: 0;
+    position: relative;
+}
+
+#company-problems-button {
+  background-color: var(--bg-secondary);
+  font-weight: 600;
+  color: white;
 }
 
 .company-logos {
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    margin: 2rem 0;
+    gap: var(--space-xl);
+    margin: var(--space-xl) 0;
+    flex-wrap: wrap;
 }
 
 .company-logos i {
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 4vw, 2.5rem);
     color: var(--text-muted);
-    transition: all 0.2s ease;
+    transition: all var(--transition-fast);
 }
 
 .company-logos i:hover {
@@ -112,40 +186,53 @@ body {
     transform: scale(1.1);
 }
 
+/* Buttons */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--space-md) var(--space-lg);
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+    cursor: pointer;
+    text-decoration: none;
+    border: none;
+}
+
 .btn-primary {
     background: var(--primary-color);
-    border-color: var(--primary-color);
-    padding: 0.75rem 1.5rem;
-    font-weight: 500;
-    transition: all 0.2s ease;
+    color: white;
 }
 
 .btn-primary:hover {
     background: var(--primary-hover);
-    border-color: var(--primary-hover);
-    transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
 }
 
 /* Features Section */
 #features {
-    padding: 6rem 0;
-    margin: 4rem 0;
+    background: var(--bg-secondary);
 }
 
 .carousel-item img {
-    border-radius: 0.75rem;
+    border-radius: var(--radius-lg);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: var(--shadow-lg);
 }
 
 #thumbnails {
-    margin-top: 1.5rem;
+    margin-top: var(--space-lg);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: var(--space-md);
+    padding: 0 var(--space-md);
 }
 
 #thumbnails img {
-    border-radius: 0.5rem;
+    width: 100%;
+    border-radius: var(--radius-md);
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all var(--transition-fast);
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -155,22 +242,22 @@ body {
 }
 
 /* FAQ Section */
-#faq {
-    padding: 6rem 0;
-    margin: 4rem 0;
-}
-
 .card {
     background: var(--bg-secondary);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 0.75rem;
-    margin-bottom: 1rem;
+    border-radius: var(--radius-lg);
+    margin-bottom: var(--space-md);
+    transition: transform var(--transition-fast);
+}
+
+.card:hover {
+    transform: translateY(-2px);
 }
 
 .card-header {
     background: rgba(255, 255, 255, 0.05);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 1rem;
+    padding: var(--space-lg);
 }
 
 .card .btn-link {
@@ -179,6 +266,8 @@ body {
     width: 100%;
     text-align: left;
     font-weight: 500;
+    padding: 0;
+    background: none;
 }
 
 .card .btn-link:hover {
@@ -186,21 +275,29 @@ body {
 }
 
 .card-body {
-    padding: 1.5rem;
+    padding: var(--space-lg);
     color: var(--text-muted);
 }
 
 /* Footer */
 footer {
     background: var(--bg-secondary);
-    padding: 2rem 0;
+    padding: var(--space-xl) 0;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: var(--space-3xl);
+}
+
+footer .container {
+    display: flex;
+    justify-content: center;
+    gap: var(--space-xl);
+    flex-wrap: wrap;
 }
 
 footer a {
     color: var(--text-muted);
     text-decoration: none;
-    transition: color 0.2s ease;
+    transition: color var(--transition-fast);
 }
 
 footer a:hover {
@@ -208,21 +305,50 @@ footer a:hover {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .display-1 {
-        font-size: 2.5rem;
+@media (max-width: 1024px) {
+    :root {
+        --space-3xl: 3rem;
     }
 
-    .section-description {
-        font-size: 1rem;
-        padding: 0 1rem;
+    .container {
+        padding: 0 var(--space-md);
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        --space-2xl: 2rem;
+        --space-xl: 1.5rem;
+    }
+
+    section {
+        padding: var(--space-2xl) 0;
     }
 
     .company-logos {
-        gap: 1rem;
+        gap: var(--space-md);
     }
 
-    .company-logos i {
-        font-size: 2rem;
+    #thumbnails {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --space-lg: 1rem;
+        --space-md: 0.75rem;
+    }
+
+    #thumbnails {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .company-logos {
+        gap: var(--space-sm);
     }
 }
