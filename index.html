@@ -33,18 +33,15 @@
   <!-- Include the shared navbar -->
   <div id="navbar-placeholder"></div>
 
-  <section class="col-md-8 offset-md-2 text-center" id="header-section" data-aos="fade-right">
-    <h1 class="mb-4 display-1 slide-in-top" id="title">Leetcode Explained</h1>
-    <p class="mt-3 font-weight-bold py-3 section-description" id="typewriter-text">
-    </p>
-    <p class="mb-8 text-light slide-in-top section-description">
-      Enhances Leetcode problems with company tags, solution videos, & GPT code analysis.
-    </p>
-
-    <div class="col-md-8 offset-md-2 text-center" id="badges">
-      <div id="web-store-links">
-        <a href="https://chrome.google.com/webstore/detail/leetcode-explained/cofoinjfjcpgcjiinjhcpomcjoalijbe"
-          id="chrome-badge">
+  <section id="header-section">
+    <div class="container">
+      <h1 class="display-1 slide-in-top" id="title">Leetcode Explained</h1>
+      <p class="mt-3 font-weight-bold py-3 section-description" id="typewriter-text"></p>
+      <p class="mb-8 text-light slide-in-top section-description">
+        Enhance your Leetcode experience with company tags, solution videos, & GPT code analysis
+      </p>
+      <div class="col-md-8 offset-md-2 text-center mt-4" id="web-store-links">
+        <a href="https://chrome.google.com/webstore/detail/leetcode-explained/cofoinjfjcpgcjiinjhcpomcjoalijbe" id="chrome-badge">
           <img src="assets/badges/chrome-badge.png" alt="Download for Chrome">
         </a>
         <a href="https://addons.mozilla.org/en-US/firefox/addon/leetcode-explained/">
@@ -54,29 +51,40 @@
           <img src="assets/badges/edge-badge.png" alt="Download for Edge">
         </a>
       </div>
+      <div class="cta-buttons">
+        <a href="#features" class="btn btn-primary btn-lg">
+          <i class="fas fa-play-circle"></i> Watch Demo
+        </a>
+        <a href="problems-by-company/company.html" class="btn btn-outline btn-lg">
+          <i class="fas fa-code"></i> Start Practicing
+        </a>
+      </div>
+
+
     </div>
   </section>
-<source>  <!-- Company Problems Section -->
-  <section class="mb-5 text-center" id="company-problems" data-aos="fade-up">
-    <h2 class="section-header">Be ready for your dream company</h2>
+
+  <!-- Company Problems Section -->
+  <section class="mb-5 text-center" id="company-problems">
     <div class="container">
+      <h2 class="section-header">Ace Your Tech Interviews</h2>
       <p class="lead mb-5">
-        Practice coding problems asked by top tech companies in their interviews.
+        Practice real interview questions from top tech companies. Get access to a curated list of problems 
+        with detailed solutions and video explanations.
       </p>
-      <div>
-        <a href="problems-by-company/company.html" class="btn btn-secondary btn-md" id="company-problems-button" >
-          View Company Problems
-        </a>
-        <div class="company-logos mb-4">
-          <i class="fab fa-google fa-2x mx-3"></i>
-          <i class="fab fa-facebook fa-2x mx-3"></i>
-          <i class="fab fa-amazon fa-2x mx-3"></i>
-          <i class="fab fa-microsoft fa-2x mx-3"></i>
-          <i class="fab fa-apple fa-2x mx-3"></i>
-        </div>
+      <div class="company-logos mb-4">
+        <i class="fab fa-google fa-2x mx-3" title="Google"></i>
+        <i class="fab fa-facebook fa-2x mx-3" title="Meta"></i>
+        <i class="fab fa-amazon fa-2x mx-3" title="Amazon"></i>
+        <i class="fab fa-microsoft fa-2x mx-3" title="Microsoft"></i>
+        <i class="fab fa-apple fa-2x mx-3" title="Apple"></i>
       </div>
-   </div>
+      <a href="problems-by-company/company.html" class="btn btn-primary btn-lg" id="company-problems-button">
+        <i class="fas fa-building"></i> Explore Company Problems
+      </a>
+    </div>
   </section>
+
   <!-- Features / Screenshots-->
   <section class="mb-5 text-center" id="features">
     <div class="container">
@@ -307,16 +315,45 @@
 
   <!-- Footer -->
   <footer class="container-fluid bg-dark py-3">
-    <div class="text-center flex">
-      <a class="mr-4" href="./privacy.html">
-        Privacy Policy
-      </a>
-      <!-- Email -->
-      <a href="mailto:zubydevelops@gmail.com">
-        Contact
-      </a>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h4 class="text-light mb-4">Leetcode Explained</h4>
+          <p class="text-muted">
+            Enhance your coding interview preparation with our powerful browser extension.
+          </p>
+        </div>
+        <div class="col-md-4">
+          <h4 class="text-light mb-4">Quick Links</h4>
+          <ul class="list-unstyled">
+            <li><a href="#features">Features</a></li>
+            <li><a href="#company-problems">Company Problems</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="./privacy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h4 class="text-light mb-4">Connect</h4>
+          <div class="social-links">
+            <a href="https://github.com/zubyj/leetcode-explained" target="_blank" class="me-3">
+              <i class="fab fa-github fa-lg"></i>
+            </a>
+            <a href="mailto:zubydevelops@gmail.com" class="me-3">
+              <i class="fas fa-envelope fa-lg"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-4 pt-3 border-top border-secondary">
+        <p class="mb-0 text-muted">&copy; 2024 Leetcode Explained. All rights reserved.</p>
+      </div>
     </div>
   </footer>
+
+  <!-- Scroll to Top Button -->
+  <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
   <!-- Image Modal -->
   <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel"
@@ -343,6 +380,47 @@
         // Add active class to the current page's nav item
         document.querySelector('a[href="/index.html"]').classList.add('active');
       });
+
+    // Scroll to Top Button
+    const scrollToTopBtn = document.getElementById('scrollToTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        scrollToTopBtn.classList.add('show');
+      } else {
+        scrollToTopBtn.classList.remove('show');
+      }
+    });
+
+    scrollToTopBtn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Add scroll reveal animation to sections
+    const sections = document.querySelectorAll('section');
+    
+    const observerOptions = {
+      root: null,
+      threshold: 0.1,
+      rootMargin: '0px'
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(section => {
+      section.classList.add('scroll-reveal');
+      observer.observe(section);
+    });
   </script>
 
   <script src="index.js"></script>
