@@ -97,10 +97,9 @@ body {
 .company-nav button:hover,
 .company-nav button.active {
     transform: translateY(-2px);
-    background: var(--primary-color);
-    color: #f8fafc;
+    background: var(--hover-bg);
     border-color: var(--primary-color);
-    box-shadow: var(--shadow-md);
+    color: var(--primary-color);
 }
 
 .company-nav button i {
@@ -130,7 +129,7 @@ body {
 
 .search-section input:focus {
     border-color: var(--primary-color) !important;
-    box-shadow: var(--shadow-sm) !important;
+    box-shadow: 0 0 0 2px rgba(45, 212, 191, 0.2) !important;
     outline: none;
 }
 

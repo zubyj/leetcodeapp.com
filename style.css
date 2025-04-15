@@ -1,8 +1,8 @@
 /* Variables */
 :root {
     /* Colors */
-    --primary-color: #4f46e5;
-    --primary-hover: #4338ca;
+    --primary-color: #0ea5e9;
+    --primary-hover: #0284c7;
     --bg-primary: #0a0f1c;
     --bg-secondary: #151e2d;
     --text-color: #f8fafc;
@@ -12,6 +12,14 @@
     --hard: #ef4444;
     --gradient-start: var(--primary-color);
     --gradient-end: var(--easy);
+    --hover-bg: rgba(45, 212, 191, 0.1);
+
+    /* Company Colors */
+    --google-color: #4285f4;
+    --meta-color: #0866ff;
+    --amazon-color: #ff9900;
+    --microsoft-color: #00a4ef;
+    --apple-color: #a2aaad;
 
     /* Spacing */
     --space-xs: 0.25rem;
@@ -160,7 +168,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-primary:hover {
     background: var(--primary-hover);
-    box-shadow: var(--shadow-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
 }
 
 .btn-outline {
@@ -198,37 +207,80 @@ h1, h2, h3, h4, h5, h6 {
     background: linear-gradient(to bottom, var(--bg-primary), var(--bg-secondary));
     margin: 0;
     position: relative;
+    margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 #company-problems-button {
     background-color: var(--bg-secondary);
     font-weight: 600;
     color: white;
+    transition: all var(--transition-fast);
+}
+
+#company-problems-button:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
 }
 
 .company-logos {
     display: flex;
     justify-content: center;
-    gap: var(--space-xl);
+    gap: var(--space-md);
     margin: var(--space-xl) 0;
     flex-wrap: wrap;
 }
 
-.company-logos i {
-    font-size: clamp(2rem, 4vw, 2.5rem);
-    color: var(--text-muted);
+.company-logos button {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-md) var(--space-lg);
+    font-weight: 500;
+    border-radius: var(--radius-md);
     transition: all var(--transition-fast);
+    background: var(--bg-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    color: var(--text-color);
 }
 
-.company-logos i:hover {
-    color: var(--text-color);
-    transform: scale(1.1);
+.company-logos button:hover {
+    transform: translateY(-2px);
+    background: var(--bg-secondary);
+    border-color: var(--text-color);
+}
+
+.company-logos button i {
+    font-size: 1.2rem;
+}
+
+.company-logos button i.fa-google {
+    color: var(--google-color);
+}
+
+.company-logos button i.fa-facebook {
+    color: var(--meta-color);
+}
+
+.company-logos button i.fa-amazon {
+    color: var(--amazon-color);
+}
+
+.company-logos button i.fa-microsoft {
+    color: var(--microsoft-color);
+}
+
+.company-logos button i.fa-apple {
+    color: var(--apple-color);
 }
 
 /* Features Section */
 #features {
     background: var(--bg-secondary);
     position: relative;
+    margin-top: 0;
+    padding-top: var(--space-3xl);
 }
 
 .carousel-item img {
@@ -332,7 +384,7 @@ footer a {
 }
 
 footer a:hover {
-    color: var(--text-color);
+    color: var(--primary-color);
 }
 
 .social-links {
@@ -410,7 +462,16 @@ footer a:hover {
     }
 
     .company-logos {
-        gap: var(--space-md);
+        gap: var(--space-sm);
+    }
+
+    .company-logos button {
+        padding: var(--space-sm) var(--space-md);
+        font-size: 0.9rem;
+    }
+
+    .company-logos button i {
+        font-size: 1rem;
     }
 
     #thumbnails {
