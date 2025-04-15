@@ -18,7 +18,7 @@
 }
 
 .nav-links a {
-    color: var(--text-color);
+    color: var(--primary-color);
     text-decoration: none;
     padding: 0.5rem 1rem;
     border-radius: 0.5rem;
@@ -37,7 +37,7 @@
 }
 
 .nav-links a.active {
-    color: #6495ed;
+    border: 1px solid var(--primary-color);
 }
 
 /* Responsive Design */

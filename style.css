@@ -207,20 +207,26 @@ h1, h2, h3, h4, h5, h6 {
     background: linear-gradient(to bottom, var(--bg-primary), var(--bg-secondary));
     margin: 0;
     position: relative;
-    margin-bottom: 0;
-    padding-bottom: 0;
+    padding: var(--space-3xl) 0;
+}
+
+#company-problems .lead {
+    max-width: 600px;
+    margin: 0 auto var(--space-xl);
 }
 
 #company-problems-button {
-    background-color: var(--bg-secondary);
+    background-color: var(--primary-color);
     font-weight: 600;
     color: white;
     transition: all var(--transition-fast);
+    margin-bottom: var(--space-2xl);
 }
 
 #company-problems-button:hover {
+    background-color: var(--primary-hover);
     transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    box-shadow: var(--shadow-primary);
 }
 
 .company-logos {
@@ -312,11 +318,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Animations */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .fade-in {
+    opacity: 0;
     animation: fadeIn 0.6s ease forwards;
 }
 
@@ -526,3 +533,51 @@ footer a:hover {
         height: 40px;
     }
 }
+
+/* Homepage Animations */
+.slide-in-top {
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: slideInTop 0.6s ease forwards;
+}
+
+@keyframes slideInTop {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Add animation delays for elements */
+#title {
+    animation-delay: 0.2s;
+}
+
+.section-description {
+    animation-delay: 0.4s;
+}
+
+#web-store-links {
+    animation: fadeIn 0.6s ease 0.6s forwards;
+    opacity: 0;
+}
+
+.cta-buttons {
+    animation: fadeIn 0.6s ease 0.8s forwards;
+    opacity: 0;
+}
+
+.company-logos button {
+    opacity: 0;
+    animation: fadeIn 0.4s ease forwards;
+}
+
+.company-logos button:nth-child(1) { animation-delay: 0.2s; }
+.company-logos button:nth-child(2) { animation-delay: 0.3s; }
+.company-logos button:nth-child(3) { animation-delay: 0.4s; }
+.company-logos button:nth-child(4) { animation-delay: 0.5s; }
+.company-logos button:nth-child(5) { animation-delay: 0.6s; }
