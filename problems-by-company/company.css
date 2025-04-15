@@ -117,12 +117,14 @@ body {
     color: var(--text-color);
 }
 
-.company-nav button:hover,
-.company-nav button.active {
-    transform: translateY(-2px);
+.company-nav button:hover {
     background: rgba(14, 165, 233, 0.15);
     border-color: var(--primary-color);
     color: var(--primary-color);
+}
+
+.company-nav button.active {
+    border-color: var(--primary-color);
 }
 
 .company-nav button i {
