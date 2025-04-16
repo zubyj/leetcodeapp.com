@@ -46,3 +46,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     typeWriter();
 })
+
+// Function to show feature modal
+function showFeatureModal(title, imageSrc, description) {
+    const modal = $('#featureModal');
+    const modalTitle = document.getElementById('featureModalLabel');
+    const modalImage = document.getElementById('featureModalImage');
+    const modalDescription = document.getElementById('featureModalDescription');
+
+    modalTitle.textContent = title;
+    modalImage.src = imageSrc;
+    modalImage.alt = title;
+    modalDescription.textContent = description;
+
+    modal.modal('show');
+}

@@ -103,42 +103,42 @@
       <h2 class="section-header mb-5">Features</h2>
       <div class="row features-grid">
         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="0">
-          <div class="feature-card">
+          <div class="feature-card" onclick="showFeatureModal('Company Tags', '/assets/images/add-companies.png', 'See which companies are asking which problems')">
             <img src="/assets/images/add-companies.png" class="img-fluid rounded shadow-lg mb-3" alt="Add Companies">
             <h3 class="h5 mb-3">Company Tags</h3>
             <p class="text-muted">See which companies are asking which problems</p>
           </div>
         </div>
         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="feature-card">
+          <div class="feature-card" onclick="showFeatureModal('Company Problems', '/assets/images/problems-by-company.png', 'Practice problems by company')">
             <img src="/assets/images/problems-by-company.png" class="img-fluid rounded shadow-lg mb-3" alt="Problems by Company">
             <h3 class="h5 mb-3">Company Problems</h3>
             <p class="text-muted">Practice problems by company</p>
           </div>
         </div>
         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="feature-card">
+          <div class="feature-card" onclick="showFeatureModal('Video Solutions', '/assets/images/add-videos.png', 'Watch video explanations for each problem')">
             <img src="/assets/images/add-videos.png" class="img-fluid rounded shadow-lg mb-3" alt="Add Videos">
             <h3 class="h5 mb-3">Video Solutions</h3>
             <p class="text-muted">Watch video explanations for each problem</p>
           </div>
         </div>
         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="feature-card">
+          <div class="feature-card" onclick="showFeatureModal('Time & Space Complexity', '/assets/images/get-complexity.png', 'Understand the efficiency of solutions')">
             <img src="/assets/images/get-complexity.png" class="img-fluid rounded shadow-lg mb-3" alt="Get Complexity">
             <h3 class="h5 mb-3">Time & Space Complexity</h3>
             <p class="text-muted">Understand the efficiency of solutions</p>
           </div>
         </div>
         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
-          <div class="feature-card">
+          <div class="feature-card" onclick="showFeatureModal('Code Solutions', '/assets/images/get-solution.png', 'Get detailed code solutions with explanations')">
             <img src="/assets/images/get-solution.png" class="img-fluid rounded shadow-lg mb-3" alt="Get Solution">
             <h3 class="h5 mb-3">Code Solutions</h3>
             <p class="text-muted">Get detailed code solutions with explanations</p>
           </div>
         </div>
         <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="500">
-          <div class="feature-card">
+          <div class="feature-card" onclick="showFeatureModal('Problem Ratings', '/assets/images/elo-rating.png', 'See problem difficulty ratings')">
             <img src="/assets/images/elo-rating.png" class="img-fluid rounded shadow-lg mb-3" alt="Elo Rating">
             <h3 class="h5 mb-3">Problem Ratings</h3>
             <p class="text-muted">See problem difficulty ratings</p>
@@ -290,12 +290,32 @@
     </div>
   </section>
 
+  <!-- Feature Modal -->
+  <div class="modal fade" id="featureModal" tabindex="-1" role="dialog" aria-labelledby="featureModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <h5 class="modal-title" id="featureModalLabel"></h5>
+          <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body text-center">
+          <img id="featureModalImage" src="" class="img-fluid rounded shadow-lg" alt="">
+          <p id="featureModalDescription" class="mt-4 text-muted"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Demo Video -->
   <section class="col-md-8 offset-md-2 mb-5 mt-5" id="video" data-aos="zoom-in-down" data-aos-duration="1000">
     <div class="container">
       <h2 class="section-header text-center">Demo</h2>
-      <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/scvXKfL5q_A" allowfullscreen></iframe>
+      <div class="video-container">
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/scvXKfL5q_A" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
   </section>
