@@ -2,450 +2,236 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    description="Landing page for a browser extension that enhances Leetcode problems with code solutions, video explanations, and GPT code analysis." />
-  <title>Leetcode Explained</title>
-  <link rel=" icon" type="image/png" href="./assets/icons/icon-16.png" sizes="16x16">
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="components/navbar.css" />
-  <!-- Font Awesome CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <!-- AOS library for animation on scroll-->
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leetcode Explained: video explanations, solutions, company tags, and progress tracking for LeetCode</title>
+  <meta name="description" content="A free, open-source browser extension that adds an Explained tab to every LeetCode problem: video walkthroughs, solution code, company tags, Elo ratings, and local progress tracking.">
+  <link rel="icon" type="image/png" href="/assets/icons/icon-16.png" sizes="16x16">
+  <link rel="icon" type="image/png" href="/assets/icons/icon-128.png" sizes="128x128">
+  <link rel="canonical" href="https://leetcodeapp.com/">
+  <meta property="og:title" content="Leetcode Explained">
+  <meta property="og:description" content="Video explanations, solution code, company tags, and progress tracking, added right into LeetCode. Free and open source.">
+  <meta property="og:image" content="https://leetcodeapp.com/assets/images/hero-full.jpg">
+  <meta property="og:url" content="https://leetcodeapp.com/">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <!-- Google tag (gtag.js) -->
+  <link rel="stylesheet" href="/style.css">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YS66HFH441"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-YS66HFH441');
   </script>
 </head>
 
 <body>
-  <!-- Include the shared navbar -->
-  <div id="navbar-placeholder"></div>
+  <header class="nav">
+    <div class="wrap">
+      <a href="/" class="brand"><img src="/assets/icons/icon-128.png" alt="">Leetcode <em>Explained</em></a>
+      <nav class="nav-links">
+        <a href="#features">Features</a>
+        <a href="/problems-by-company/">Company problems</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://github.com/zubyj/leetcode-explained" target="_blank" rel="noopener">GitHub</a>
+        <a class="button primary" href="https://chrome.google.com/webstore/detail/leetcode-explained/cofoinjfjcpgcjiinjhcpomcjoalijbe" target="_blank" rel="noopener">Add to Chrome</a>
+      </nav>
+    </div>
+  </header>
 
-  <section id="header-section">
-    <div class="container">
-      <h1 class="display-1 slide-in-top" id="title">Leetcode Explained</h1>
-      <p class="mb-8 text-light slide-in-top section-description">
-        Enhance your Leetcode experience with company tags, solution videos, & GPT code analysis
-      </p>
-      <div class="col-md-8 offset-md-2 text-center mt-4" id="web-store-links">
-        <a href="https://chrome.google.com/webstore/detail/leetcode-explained/cofoinjfjcpgcjiinjhcpomcjoalijbe" id="chrome-badge">
-          <img src="assets/badges/chrome-badge.png" alt="Download for Chrome">
-        </a>
-        <a href="https://addons.mozilla.org/en-US/firefox/addon/leetcode-explained/">
-          <img src="assets/badges/firefox-badge.png" alt="Download for Firefox">
-        </a>
-        <a href="https://chrome.google.com/webstore/detail/leetcode-explained/cofoinjfjcpgcjiinjhcpomcjoalijbe">
-          <img src="assets/badges/edge-badge.png" alt="Download for Edge">
-        </a>
+  <section class="hero">
+    <div class="wrap">
+      <span class="eyebrow"><b>New in 2.4</b> a full rewrite, plus progress tracking</span>
+      <h1>Everything you need to solve a LeetCode problem, <em>on the problem</em></h1>
+      <p>A free, open-source extension that adds an <strong>Explained</strong> tab to every LeetCode problem: video walkthroughs, solution code, the companies that ask it, and a local record of your progress.</p>
+      <div class="store-row">
+        <a href="https://chrome.google.com/webstore/detail/leetcode-explained/cofoinjfjcpgcjiinjhcpomcjoalijbe" target="_blank" rel="noopener"><img src="/assets/badges/chrome-badge.png" alt="Get it on Chrome"></a>
+        <a href="https://addons.mozilla.org/en-US/firefox/addon/leetcode-explained/" target="_blank" rel="noopener"><img src="/assets/badges/firefox-badge.png" alt="Get it on Firefox"></a>
+        <a href="https://chrome.google.com/webstore/detail/leetcode-explained/cofoinjfjcpgcjiinjhcpomcjoalijbe" target="_blank" rel="noopener"><img src="/assets/badges/edge-badge.png" alt="Get it on Edge"></a>
       </div>
-      <p class="mt-3 font-weight-bold py-3 section-description" id="typewriter-text"></p>
-      <div class="cta-buttons">
-        <a href="#features" class="btn btn-primary btn-lg">
-          <i class="fas fa-play-circle"></i> Watch Demo
-        </a>
-        <a href="problems-by-company/company.html" class="btn btn-outline btn-lg">
-          <i class="fas fa-building"></i> Company Problems
-        </a>
-      </div>
+      <p class="hero-meta">10,000+ users · Free forever · <a href="https://github.com/zubyj/leetcode-explained" target="_blank" rel="noopener">MIT licensed on GitHub</a></p>
+      <div class="hero-shot"><img src="/assets/images/hero-full.jpg" alt="The Explained tab on a LeetCode problem showing companies, a NeetCode video, and Python solution code" width="1456" height="786"></div>
     </div>
   </section>
 
-  <!-- Company Problems Section -->
-  <section class="text-center" id="company-problems">
-    <div class="container">
-      <h2 class="section-header">Ace Your Tech Interviews</h2>
-      <p class="lead my-5">
-        Practice the most asked questions from top tech companies. 
-      </p>
-      <div class="company-logos mb-5">
-        <button onclick="window.location.href='problems-by-company/company.html?company=Google'">
-          <i class="fab fa-google"></i>
-          <span>Google</span>
-        </button>
-        <button onclick="window.location.href='problems-by-company/company.html?company=Meta'">
-          <i class="fab fa-facebook"></i>
-          <span>Meta</span>
-        </button>
-        <button onclick="window.location.href='problems-by-company/company.html?company=Amazon'">
-          <i class="fab fa-amazon"></i>
-          <span>Amazon</span>
-        </button>
-        <button onclick="window.location.href='problems-by-company/company.html?company=Microsoft'">
-          <i class="fab fa-microsoft"></i>
-          <span>Microsoft</span>
-        </button>
-        <button onclick="window.location.href='problems-by-company/company.html?company=Apple'">
-          <i class="fab fa-apple"></i>
-          <span>Apple</span>
-        </button>
+  <section id="features">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>One tab, next to Submissions</h2>
+        <p>No popups to open, no other sites to visit. Click <strong>Explained</strong> and it's all there.</p>
       </div>
-      <a href="problems-by-company/company.html" class="btn btn-primary btn-lg" id="company-problems-button">
-        <i class="fas fa-building"></i> Explore Company Problems
-      </a>
-    </div>
-  </section>
 
-  <!-- Features / Screenshots-->
-  <section class="mb-5 text-center" id="features">
-    <div class="container">
-      <h2 class="section-header mb-5">Features</h2>
-      <div class="row features-grid">
-        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="0">
-          <div class="feature-card" onclick="showFeatureModal('Company Tags', '/assets/images/add-companies.png', 'See which companies are asking which problems')">
-            <img src="/assets/images/add-companies.png" class="img-fluid rounded shadow-lg mb-3" alt="Add Companies">
-            <h3 class="h5 mb-3">Company Tags</h3>
-            <p class="text-muted">See which companies are asking which problems</p>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="feature-card" onclick="showFeatureModal('Company Problems', '/assets/images/problems-by-company.png', 'Practice problems by company')">
-            <img src="/assets/images/problems-by-company.png" class="img-fluid rounded shadow-lg mb-3" alt="Problems by Company">
-            <h3 class="h5 mb-3">Company Problems</h3>
-            <p class="text-muted">Practice problems by company</p>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="feature-card" onclick="showFeatureModal('Video Solutions', '/assets/images/add-videos.png', 'Watch video explanations for each problem')">
-            <img src="/assets/images/add-videos.png" class="img-fluid rounded shadow-lg mb-3" alt="Add Videos">
-            <h3 class="h5 mb-3">Video Solutions</h3>
-            <p class="text-muted">Watch video explanations for each problem</p>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="feature-card" onclick="showFeatureModal('Time & Space Complexity', '/assets/images/get-complexity.png', 'Understand the efficiency of solutions')">
-            <img src="/assets/images/get-complexity.png" class="img-fluid rounded shadow-lg mb-3" alt="Get Complexity">
-            <h3 class="h5 mb-3">Time & Space Complexity</h3>
-            <p class="text-muted">Understand the efficiency of solutions</p>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
-          <div class="feature-card" onclick="showFeatureModal('Code Solutions', '/assets/images/get-solution.png', 'Get detailed code solutions with explanations')">
-            <img src="/assets/images/get-solution.png" class="img-fluid rounded shadow-lg mb-3" alt="Get Solution">
-            <h3 class="h5 mb-3">Code Solutions</h3>
-            <p class="text-muted">Get detailed code solutions with explanations</p>
-          </div>
-        </div>
-        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="500">
-          <div class="feature-card" onclick="showFeatureModal('Problem Ratings', '/assets/images/elo-rating.png', 'See problem difficulty ratings')">
-            <img src="/assets/images/elo-rating.png" class="img-fluid rounded shadow-lg mb-3" alt="Elo Rating">
-            <h3 class="h5 mb-3">Problem Ratings</h3>
-            <p class="text-muted">See problem difficulty ratings</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ Section -->
-  <section class="col-md-8 offset-md-2 mb-5" id="faq" data-aos="fade-in" data-aos-duration="3000">
-    <div class="container">
-      <h2 class="section-header text-center">FAQ</h2>
-      <div id="accordion">
-        <!-- Question 1 -->
-        <div class="card mb-3 clickable" id="question1">
-          <div class="card-header" id="headingOne">
-            <h3 class="mb-0">
-              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseOne"
-                aria-expanded="false" aria-controls="collapseOne">
-                How do I use Leetcode Explained?
-              </button>
-            </h3>
-          </div>
-          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-            <div class="card-body">
-              First, make sure you're using the new dynamic Leetcode layout. Now, you can open a Leetcode problem's
-              description and solutions tab to view company tags & code/video solutions. If you pin the extension, you
-              can
-              generate code solutions using ChatGPT.
-            </div>
-          </div>
-        </div>
-        <!-- Question 2 -->
-        <div class="card mb-3">
-          <div class="card-header" id="headingTwo">
-            <h3 class="mb-0">
-              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
-                aria-expanded="false" aria-controls="collapseTwo">
-                When I install it, why does it ask for permission to read my browsing history?
-              </button>
-            </h3>
-          </div>
-          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-            <div class="card-body">
-              Leetcode Explained reads the title of the tab to determine which problem you are on. This is
-              necessary to display the correct company tags and solution videos in each problem.
-            </div>
-          </div>
-        </div>
-        <!-- Question 3 -->
-        <div class="card mb-3">
-          <div class="card-header" id="headingThree">
-            <h3 class="mb-0">
-              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree"
-                aria-expanded="false" aria-controls="collapseThree">
-                Does Leetcode Explained collect any data?
-              </button>
-            </h3>
-          </div>
-
-          <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-            <div class="card-body">
-              No data is collected by Leetcode Explained. All relevant data is stored locally in your browser.
-              If you would like to view the source code, you can find it on our <a
-                href="https://github.com/zubyj/leetcode-explained">Github</a>.
-            </div>
-          </div>
-        </div>
-        <!-- Question 4 -->
-        <div class="card mb-3">
-          <div class="card-header" id="headingFour">
-            <h3 class="mb-0">
-              <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour"
-                aria-expanded="false" aria-controls="collapseFour">
-                Is Leetcode Explained free to use?
-              </button>
-            </h3>
-          </div>
-          <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-            <div class="card-body">
-              Yes, Leetcode Explained is entirely free to use. We believe in providing quality resources that can
-              aid in improving coding skills, and we are delighted to offer this to our users free of charge.
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Question 5 -->
-      <div class="card mb-3">
-        <div class="card-header" id="headingFive">
-          <h3 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFive"
-              aria-expanded="false" aria-controls="collapseFive">
-              How can I contribute to Leetcode Explained?
-            </button>
-          </h3>
-        </div>
-        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
-          <div class="card-body">
-            Leetcode Explained is an open source project, and we welcome contributions from the community. If you
-            would like to contribute, please visit our <a href="https://github.com/zubyj/leetcode-explained">Github</a>
-            page.
-          </div>
-        </div>
-      </div>
-      <!-- Question 6 -->
-      <div class="card mb-3">
-        <div class="card-header" id="headingSix">
-          <h3 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSix"
-              aria-expanded="false" aria-controls="collapseSix">
-              How can I report a bug?
-            </button>
-          </h3>
-        </div>
-        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
-          <div class="card-body">
-            If you encounter a bug, please message me <a href="mailto:zubydevelops@gmail.com">here</a> me and I'll fix
-            it as
-            soon as possible
-          </div>
-        </div>
-      </div>
-      <!-- Question 7 -->
-      <div class="card mb-3">
-        <div class="card-header" id="headingSeven">
-          <h3 class="mb-0">
-            <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseSeven"
-              aria-expanded="false" aria-controls="collapseSeven">
-              How are the elo ratings and company tags calculated?
-            </button>
-          </h3>
-        </div>
-        <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
-          <div class="card-body">
-            <div>
-              <strong>Elo Rating:</strong> The dataset for Elo rating was sourced from <a
-                href="https://github.com/zerotrac/leetcode_problem_rating" target="_blank">this GitHub
-                repository</a>.
-            </div>
-            <div>
-              <strong>Company Tags:</strong> The dataset for company tags was sourced from two datasets including this
-              one <a href="https://github.com/hxu296/leetcode-company-wise-problems-2022" target="_blank">this GitHub
-                repository</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Feature Modal -->
-  <div class="modal fade" id="featureModal" tabindex="-1" role="dialog" aria-labelledby="featureModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
-      <div class="modal-content bg-dark">
-        <div class="modal-header border-0">
-          <h5 class="modal-title" id="featureModalLabel"></h5>
-          <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
-        <div class="modal-body text-center">
-          <img id="featureModalImage" src="" class="img-fluid rounded shadow-lg" alt="">
-          <p id="featureModalDescription" class="mt-4 text-muted"></p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Demo Video -->
-  <section class="col-md-8 offset-md-2 mb-5 mt-5" id="video" data-aos="zoom-in-down" data-aos-duration="1000">
-    <div class="container">
-      <h2 class="section-header text-center">Demo</h2>
-      <div class="video-container">
-        <div class="embed-responsive embed-responsive-16by9">
-          <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/scvXKfL5q_A" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="container-fluid bg-dark py-3">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <h4 class="text-light mb-4">Leetcode Explained</h4>
-          <p class="text-muted">
-            Enhance your coding interview preparation with our powerful browser extension.
-          </p>
-        </div>
-        <div class="col-md-4">
-          <h4 class="text-light mb-4">Quick Links</h4>
-          <ul class="list-unstyled">
-            <li><a href="#features">Features</a></li>
-            <li><a href="#company-problems">Company Problems</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="./privacy.html">Privacy Policy</a></li>
+      <div class="feature">
+        <div class="feature-text">
+          <h3>Video walkthroughs</h3>
+          <p>Up to five YouTube explanations per problem from channels like NeetCode, playable right on the page.</p>
+          <ul>
+            <li>NeetCode pinned first when there is one</li>
+            <li>Switch creators with the arrows</li>
+            <li>Covers the most popular problems, refreshed regularly</li>
           </ul>
         </div>
-        <div class="col-md-4">
-          <h4 class="text-light mb-4">Connect</h4>
-          <div class="social-links">
-            <a href="https://github.com/zubyj/leetcode-explained" target="_blank" class="me-3">
-              <i class="fab fa-github fa-lg"></i>
-            </a>
-            <a href="mailto:zubydevelops@gmail.com" class="me-3">
-              <i class="fas fa-envelope fa-lg"></i>
-            </a>
-          </div>
+        <div class="feature-shot"><img src="/assets/images/feature-video.jpg" alt="Video explanations section with a NeetCode video" loading="lazy"></div>
+      </div>
+
+      <div class="feature flip">
+        <div class="feature-text">
+          <h3>Solution code you can read</h3>
+          <p>Reference solutions in Python, Java, C++, and JavaScript from the open-source NeetCode repo, syntax highlighted and auto-matched to the language in your editor.</p>
+          <ul>
+            <li>One click to copy</li>
+            <li>Loads only when you open the tab, so the page stays fast</li>
+          </ul>
         </div>
+        <div class="feature-shot"><img src="/assets/images/feature-code.jpg" alt="Solution code section with language chips and highlighted Python" loading="lazy"></div>
       </div>
-      <div class="text-center mt-4 pt-3 border-top border-secondary">
-        <p class="mb-0 text-muted">&copy; 2024 Leetcode Explained. All rights reserved.</p>
+
+      <div class="feature">
+        <div class="feature-text">
+          <h3>Who actually asks this</h3>
+          <p>Company tags with frequency and a marker for companies that asked the problem in the last six months. Click a company for its 50 most-asked problems.</p>
+          <ul>
+            <li>264 companies, 2,400+ tagged problems</li>
+            <li>Elo difficulty ratings on 1,800+ problems, a number instead of Easy / Medium / Hard</li>
+            <li>Browse it all on the <a href="/problems-by-company/">company problems page</a></li>
+          </ul>
+        </div>
+        <div class="feature-shot"><img src="/assets/images/feature-description.jpg" alt="Description tab with an Elo rating badge and company tags" loading="lazy"></div>
       </div>
+    </div>
+  </section>
+
+  <section id="progress" style="background: var(--bg-2); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border);">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Know how your practice is going</h2>
+        <p>Every submission you make is recorded on your device. Nothing leaves your browser.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-text">
+          <h3>Progress, on your terms</h3>
+          <p>Solved today, this week, your streak, a 30-day activity grid, and the problems you keep failing, right in the popup.</p>
+          <ul>
+            <li>Import your existing LeetCode history in one click</li>
+            <li>Full report page: year heatmap, weekly trend, acceptance rate, languages, topics</li>
+            <li>Company coverage: how much of each company's top 50 you've solved</li>
+            <li>Export everything as JSON whenever you want</li>
+          </ul>
+        </div>
+        <div class="feature-shot"><img src="/assets/images/feature-report.jpg" alt="Full progress report with heatmap, weekly trend, and breakdowns" loading="lazy"></div>
+      </div>
+      <div class="feature flip">
+        <div class="feature-text">
+          <h3>AI help when you're stuck</h3>
+          <p>Generate or fix solution code from the problem and what you've written so far, or ask for the time and space complexity of your code.</p>
+          <ul>
+            <li>No API key. Uses your logged-in ChatGPT session, or a free hosted model if you're not logged in</li>
+            <li>Tells you which one answered, every time</li>
+          </ul>
+        </div>
+        <div class="feature-shot"><img src="/assets/images/feature-assistant.jpg" alt="The popup generating solution code" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="companies">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Practice by company</h2>
+        <p>The most-asked problems for each company, with how often and how recently they came up. No extension needed for this page.</p>
+      </div>
+      <div class="company-strip" id="company-strip"></div>
+    </div>
+  </section>
+
+  <section id="changelog">
+    <div class="wrap">
+      <div class="changelog">
+        <h3><span class="tag">2.4.0</span> What's new</h3>
+        <ul>
+          <li>Rewritten from scratch for the current LeetCode UI. Faster and lighter.</li>
+          <li>New Explained tab replaces the old injections into the Solutions feed.</li>
+          <li>Local progress tracking with a full report page and history import.</li>
+          <li>Company data refreshed, now with "asked recently" markers.</li>
+          <li>Syntax-highlighted solutions, and AI answers work with or without a ChatGPT login.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Questions</h2>
+      </div>
+      <div class="faq">
+        <details>
+          <summary>How do I use it?</summary>
+          <p>Install it, open any LeetCode problem, and click the new <strong>Explained</strong> tab next to Submissions. Pin the extension to use the AI features and see your progress.</p>
+        </details>
+        <details>
+          <summary>Does it collect any data?</summary>
+          <p>No. Settings, the problem dataset, and your submission history are stored in your browser and never sent to us. The only network requests are to fetch solution code from GitHub and, if you use the AI buttons, to send the problem text to the model that answers. Details in the <a href="/privacy.html">privacy policy</a>.</p>
+        </details>
+        <details>
+          <summary>Why does it ask for permission to read tabs?</summary>
+          <p>The popup reads the active tab's URL and title to know which problem you're on. That's the only use.</p>
+        </details>
+        <details>
+          <summary>Where do the videos, solutions, and company data come from?</summary>
+          <p>Videos are found through the YouTube Data API. Solution code is fetched live from the open-source <a href="https://github.com/neetcode-gh/leetcode" target="_blank" rel="noopener">NeetCode repository</a>. Company tags come from the community-maintained <a href="https://github.com/liquidslr/leetcode-company-wise-problems" target="_blank" rel="noopener">liquidslr dataset</a>, and Elo ratings from <a href="https://github.com/zerotrac/leetcode_problem_rating" target="_blank" rel="noopener">zerotrac</a>.</p>
+        </details>
+        <details>
+          <summary>Is it free?</summary>
+          <p>Yes, and open source under the MIT license. Contributions are welcome on <a href="https://github.com/zubyj/leetcode-explained" target="_blank" rel="noopener">GitHub</a>.</p>
+        </details>
+        <details>
+          <summary>Something broke. Who do I tell?</summary>
+          <p>Email <a href="mailto:zubydevelops@gmail.com">zubydevelops@gmail.com</a> or open an issue on GitHub. LeetCode changes its page often, and a quick report gets it fixed faster than a review.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <h2>Add it to your browser</h2>
+      <p>Free, open source, and it stays out of your way until you click the tab.</p>
+      <div class="store-row">
+        <a href="https://chrome.google.com/webstore/detail/leetcode-explained/cofoinjfjcpgcjiinjhcpomcjoalijbe" target="_blank" rel="noopener"><img src="/assets/badges/chrome-badge.png" alt="Get it on Chrome"></a>
+        <a href="https://addons.mozilla.org/en-US/firefox/addon/leetcode-explained/" target="_blank" rel="noopener"><img src="/assets/badges/firefox-badge.png" alt="Get it on Firefox"></a>
+        <a href="https://chrome.google.com/webstore/detail/leetcode-explained/cofoinjfjcpgcjiinjhcpomcjoalijbe" target="_blank" rel="noopener"><img src="/assets/badges/edge-badge.png" alt="Get it on Edge"></a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap">
+      <span>Leetcode Explained is not affiliated with LeetCode.</span>
+      <nav>
+        <a href="/privacy.html">Privacy</a>
+        <a href="https://github.com/zubyj/leetcode-explained" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:zubydevelops@gmail.com">Contact</a>
+      </nav>
     </div>
   </footer>
 
-  <!-- Scroll to Top Button -->
-  <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
-    <i class="fas fa-arrow-up"></i>
-  </button>
-
-  <!-- Image Modal -->
-  <div class="modal fade" id="imageModal" tabindex="-1" role="dialog" aria-labelledby="imageModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-      <div class="modal-content bg-dark">
-        <div class="modal-body">
-          <img id="modalImage" src="" class="img-fluid rounded">
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" id="prevButton">Previous</button>
-          <button type="button" class="btn btn-secondary" id="nextButton">Next</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
   <script>
-    // Load the shared navbar
-    fetch('/components/navbar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navbar-placeholder').innerHTML = data;
-        // Add active class to the current page's nav item
-        document.querySelector('a[href="/index.html"]').classList.add('active');
-      });
-
-    // Scroll to Top Button
-    const scrollToTopBtn = document.getElementById('scrollToTop');
-    
-    window.addEventListener('scroll', () => {
-      if (window.pageYOffset > 300) {
-        scrollToTopBtn.classList.add('show');
-      } else {
-        scrollToTopBtn.classList.remove('show');
-      }
-    });
-
-    scrollToTopBtn.addEventListener('click', () => {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
-    });
-
-    // Add scroll reveal animation to sections
-    const sections = document.querySelectorAll('section');
-    
-    const observerOptions = {
-      root: null,
-      threshold: 0.1,
-      rootMargin: '0px'
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    }, observerOptions);
-
-    sections.forEach(section => {
-      section.classList.add('scroll-reveal');
-      observer.observe(section);
+    const featured = ['Amazon', 'Google', 'Meta', 'Microsoft', 'Apple', 'Bloomberg', 'Uber', 'Adobe', 'TikTok', 'Oracle', 'Nvidia', 'Netflix'];
+    const strip = document.getElementById('company-strip');
+    featured.forEach((name) => {
+      const link = document.createElement('a');
+      link.href = `/problems-by-company/?company=${encodeURIComponent(name)}`;
+      const logo = document.createElement('img');
+      logo.src = `https://www.google.com/s2/favicons?domain=${name.toLowerCase()}.com&sz=32`;
+      logo.alt = '';
+      logo.onerror = () => logo.remove();
+      link.append(logo, name);
+      strip.appendChild(link);
     });
   </script>
-
-  <script src="index.js"></script>
-  <!-- AOS library for animation on scroll-->
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-  <!-- Bootstrap and MUI JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
 </body>
 
 </html>

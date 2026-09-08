@@ -2,65 +2,83 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Privacy Policy</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy · Leetcode Explained</title>
+  <link rel="icon" type="image/png" href="/assets/icons/icon-16.png" sizes="16x16">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
-    <section id="privacyPolicy">
-        <div class="container">
-            <div class="text-center my-5">
-                <a href="index.html" class="btn btn-primary my-5 text-center">
-                    Back to Home
-                </a>
-            </div>
+  <header class="nav">
+    <div class="wrap">
+      <a href="/" class="brand"><img src="/assets/icons/icon-128.png" alt="">Leetcode <em>Explained</em></a>
+      <nav class="nav-links">
+        <a href="/#features">Features</a>
+        <a href="/problems-by-company/">Company problems</a>
+        <a href="https://github.com/zubyj/leetcode-explained" target="_blank" rel="noopener">GitHub</a>
+      </nav>
+    </div>
+  </header>
 
-            <h2>Leetcode Explained Privacy Policy</h2>
-            <div class="my-5">
-                <h4>Information Collection and Use</h4>
-                <p class="section-description">Leetcode Explained does not collect any personal or sensitive user data.
-                    Our
-                    extension uses local storage
-                    to store LeetCode problem data, which is used only for providing the functionality of injecting
-                    YouTube
-                    video solutions into LeetCode problem pages.</p>
-            </div>
-            <div class="my-5">
-                <h4>Data Storage and Security</h4>
-                <p class="section-description">All data used by Leetcode Explained is stored locally on the user's
-                    device
-                    and is not transmitted or
-                    shared with any third-party services or entities. We do not collect or handle any personal or
-                    sensitive
-                    user data, and thus there is no data transmission or storage that requires encryption.</p>
-            </div>
-            <div class="my-5">
-                <h4>Changes to This Privacy Policy</h4>
-                <p class="section-description">We may update our Privacy Policy from time to time. We will notify you of
-                    any
-                    changes by posting the new
-                    Privacy Policy on this page. You are advised to review this Privacy Policy periodically for any
-                    changes.
-                    Changes to this Privacy Policy are effective when they are posted on this page.</p>
-            </div>
-        </div>
-    </section>
+  <main class="prose">
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated September 8, 2026 · applies to Leetcode Explained 2.4.0 and later</p>
 
-    <!-- Bootstrap and MUI JavaScript -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
+    <h2>The short version</h2>
+    <p>Leetcode Explained has no accounts and no server that stores anything about you. Everything the extension keeps lives in your browser's extension storage on your device, and you can delete it by removing the extension.</p>
+
+    <h2>What is stored on your device</h2>
+    <ul>
+      <li><strong>Settings</strong>: theme, display size, and which features are turned on.</li>
+      <li><strong>The problem dataset</strong> bundled with the extension: video links, solution languages, company tags, and Elo ratings.</li>
+      <li><strong>Your submission history</strong>: when you submit a solution on LeetCode, or use "Import history", the extension records the problem, result, language, timestamp, and runtime for each submission so it can show your progress. This is read from LeetCode using your own logged-in session and is never sent anywhere else.</li>
+      <li><strong>Your last AI answer</strong>, so it is still there when you reopen the popup.</li>
+    </ul>
+
+    <h2>Network requests the extension makes</h2>
+    <ul>
+      <li><strong>github.com</strong>: fetches solution code from the public NeetCode repository when you open the Solution code section.</li>
+      <li><strong>google.com</strong>: loads small company logos (favicons) for company tags.</li>
+      <li><strong>youtube.com</strong>: embeds the video player when you open the Video section. YouTube's own privacy policy applies to the player.</li>
+      <li><strong>leetcode.com</strong>: reads your submission results and history using your existing login, only from pages you have open.</li>
+      <li><strong>AI features (only when you click Solution code or Complexity)</strong>: the problem description and the code in your editor are sent to the model that answers. If "Use my ChatGPT account" is on and you are logged into chatgpt.com, the request goes to ChatGPT through your own session and OpenAI's privacy policy applies. Otherwise the text is sent to api.leetcodeapp.com, which forwards it to a hosted model and returns the answer; the prompt is not stored after the response is returned. A random, anonymous installation id and the extension version are included so abuse can be rate-limited. No account, email, or LeetCode identity is sent.</li>
+    </ul>
+
+    <h2>What we do not do</h2>
+    <ul>
+      <li>We do not collect, sell, or share personal data.</li>
+      <li>We do not track which problems you view or solve on any server.</li>
+      <li>We do not read browsing activity outside leetcode.com and chatgpt.com, the only sites the extension runs on.</li>
+    </ul>
+
+    <h2>Permissions</h2>
+    <ul>
+      <li><strong>storage</strong>: to keep the items listed above on your device.</li>
+      <li><strong>tabs</strong>: to read the active tab's URL and title so the popup knows which problem you are on, and to open the extension's own pages.</li>
+    </ul>
+
+    <h2>This website</h2>
+    <p>leetcodeapp.com uses Google Analytics to count visits. No form on this site collects personal information.</p>
+
+    <h2>Changes</h2>
+    <p>Changes to this policy are posted on this page with a new date at the top.</p>
+
+    <h2>Contact</h2>
+    <p>Questions: <a href="mailto:zubydevelops@gmail.com">zubydevelops@gmail.com</a>. The full source code is on <a href="https://github.com/zubyj/leetcode-explained" target="_blank" rel="noopener">GitHub</a>.</p>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <span>Leetcode Explained is not affiliated with LeetCode.</span>
+      <nav>
+        <a href="/">Home</a>
+        <a href="https://github.com/zubyj/leetcode-explained" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:zubydevelops@gmail.com">Contact</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 
 </html>
